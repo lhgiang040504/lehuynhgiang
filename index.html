@@ -1858,14 +1858,14 @@
 
       #skills {
         display: grid;
-        grid-template-columns: 0.8fr 1.2fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 1rem;
         align-items: start;
       }
 
       #skills h2 {
-        position: sticky;
-        top: 92px;
+        grid-column: 1 / -1;
+        position: static;
       }
 
       #skills .card {
@@ -2112,8 +2112,8 @@
         <ul class="links">
           <li><a href="#experience">Experience</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#publications">Projects</a></li>
-          <li><a href="#achievements">Publications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#publications">Publications</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#certificates">Focus</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -2191,117 +2191,265 @@
 
     <!-- EXPERIENCE -->
     <section id="experience" class="section container">
-      <h2 data-aos="fade-up">Research Experience</h2>
-      <div class="timeline">
-        <div class="titem card" data-aos="fade-up" data-aos-delay="50">
-          <h3><i class="fas fa-briefcase" style="color: var(--primary); margin-right: 0.5rem;"></i>AI Researcher - InsecLab (University Lab)</h3>
-          <p><em><i class="fas fa-calendar-alt" style="color: var(--accent); margin-right: 0.5rem;"></i>Feb 2025 - Present</em></p>
+      <h2 data-aos="fade-up">Experience</h2>
 
-          <h4 style="color: var(--primary); margin-top: 1.5rem;">AI for Smart Contract Security</h4>
+      <div class="timeline">
+
+        <div class="titem card" data-aos="fade-up" data-aos-delay="50">
+          <h3>
+            <i class="fas fa-briefcase" style="color: var(--primary); margin-right: 0.5rem;"></i>
+            InsecLab (University Lab)
+          </h3>
+
+          <p><em>11 mos | Hybrid</em></p>
+
+          <h4 style="color: var(--primary); margin-top:1.5rem;">
+            First Author (Lead Researcher)
+          </h4>
+
+          <p><em>Nov 2025 – Mar 2026 · 5 mos</em></p>
+
           <ul>
-            <li>Researched both <strong>LLM-based</strong> and <strong>embedding-based</strong> approaches for smart contract vulnerability detection.</li>
-            <li>Published <strong>2 IEEE papers</strong>, including <strong>1 first-author paper</strong>, and contributed to ongoing research on AI for blockchain security.</li>
-            <li>Designed structured prompt pipelines using <strong>agent-role chaining</strong> to improve reasoning quality and reduce hallucination.</li>
-            <li>Built data pipelines for large-scale processing, embedding generation, and graph construction.</li>
-            <li>Developed and evaluated LLM models with experiment tracking and ablation studies.</li>
+            <li>Built data processing pipelines for heterogeneous smart contract graphs used in vulnerability detection systems.</li>
+            <li>Implemented preprocessing and graph construction workflows in Python for converting raw contract code into structured graph representations.</li>
+            <li>Integrated LLM embeddings with graph representations using hybrid fusion architectures.</li>
+            <li>Generated adversarial smart contract samples to improve robustness and support large-scale evaluation.</li>
           </ul>
+
+
+          <h4 style="color: var(--primary); margin-top:1.5rem;">
+            First Author (Lead Researcher)
+          </h4>
+
+          <p><em>Aug 2025 – Nov 2025 · 4 mos</em></p>
+
+          <ul>
+            <li>Developed a multimodal ML pipeline for smart contract vulnerability detection achieving <strong>0.823 F1-score</strong> and <strong>96.73% accuracy</strong>.</li>
+
+            <li>Built preprocessing and feature extraction workflows integrating multiple datasets (Prime, HuggingFace Slither-Audited).</li>
+
+            <li>Implemented deep learning pipelines combining semantic embeddings and opcode-based representations.</li>
+
+            <li>Designed and benchmarked multiple fusion strategies including attention-based and hybrid architectures.</li>
+          </ul>
+
+
+          <h4 style="color: var(--primary); margin-top:1.5rem;">
+            Co-author (Contributor)
+          </h4>
+
+          <p><em>May 2025 – Aug 2025 · 4 mos</em></p>
+
+          <ul>
+            <li>Designed structured prompt workflows to improve reasoning consistency in automated vulnerability analysis.</li>
+
+            <li>Built a six-stage prompt pipeline integrating role definition, verification, critique, and reasoning strategies.</li>
+
+            <li>Evaluated and optimized LLM performance across multiple model configurations.</li>
+          </ul>
+
         </div>
+
+
 
         <div class="titem card" data-aos="fade-up" data-aos-delay="100">
-          <h3><i class="fas fa-flask" style="color: var(--primary); margin-right: 0.5rem;"></i>AI Research Collaboration - Pi Labs AI</h3>
-          <p><em><i class="fas fa-calendar-alt" style="color: var(--accent); margin-right: 0.5rem;"></i>Sep 2025 - Dec 2025</em></p>
 
-          <h4 style="color: var(--primary); margin-top: 1.5rem;">Telecom Anomaly Detection</h4>
+          <h3>
+            <i class="fas fa-flask" style="color: var(--primary); margin-right: 0.5rem;"></i>
+            pi-labs.ai
+          </h3>
+
+          <h4 style="color: var(--primary); margin-top:1.5rem;">
+            AI Research Collaboration
+          </h4>
+
+          <p><em>Sep 2025 – Dec 2025 · 4 mos | Remote</em></p>
+
           <ul>
-            <li>Developed anomaly detection solutions for telecom <strong>CDR/IPDR</strong> data in an industry collaboration.</li>
-            <li>Defined problem scope, evaluation framework, and experimental setup for fraud and anomaly detection research.</li>
-            <li>Generated synthetic datasets and simulated anomalies for model training and testing.</li>
-            <li>Evaluated and adapted <strong>KAG/RAG</strong> frameworks for structured, non-text telecom data.</li>
-            <li>Proposed graph-based representations and multimodal extensions combining CDR with voice/text signals for multi-hop fraud detection.</li>
+            <li>Worked on telecom anomaly detection using CDR/IPDR data under industry collaboration.</li>
+
+            <li>Defined project scope, dataset schema, and evaluation strategy.</li>
+
+            <li>Implemented synthetic dataset generation and anomaly simulation pipelines.</li>
+
+            <li>Explored multimodal extensions combining CDR with voice/text signals for fraud detection systems.</li>
           </ul>
+
         </div>
+
       </div>
     </section>
 
     <!-- SKILLS -->
     <section id="skills" class="section container">
       <h2 data-aos="fade-up">Technical Skills</h2>
+
       <div class="card" data-aos="fade-up" data-aos-delay="50">
-        <h3><i class="fas fa-brain" style="color: var(--primary); margin-right: 0.5rem;"></i>Generative AI & LLMs</h3>
+        <h3>
+          <i class="fas fa-brain" style="color: var(--primary); margin-right: 0.5rem;"></i>
+          LLMs & Generative AI
+        </h3>
+
         <div class="pillset">
-          <span class="pill">RAG Systems</span>
+          <span class="pill">Advanced RAG</span>
           <span class="pill">Agentic Workflows</span>
-          <span class="pill">LangGraph</span>
-          <span class="pill">ReAct</span>
+          <span class="pill">Lang Community</span>
+          <span class="pill">LlamaIndex</span>
           <span class="pill">Prompt Engineering</span>
+          <span class="pill">Tool Calling</span>
+          <span class="pill">Function Calling</span>
           <span class="pill">LLM Evaluation</span>
+          <span class="pill">LoRA / QLoRA</span>
+          <span class="pill">LLaMA</span>
+          <span class="pill">OpenAI API</span>
         </div>
       </div>
 
+
       <div class="card" data-aos="fade-up" data-aos-delay="100">
-        <h3><i class="fas fa-code" style="color: var(--primary); margin-right: 0.5rem;"></i>Information Retrieval</h3>
+        <h3>
+          <i class="fas fa-microchip" style="color: var(--primary); margin-right: 0.5rem;"></i>
+          Machine Learning & AI Research
+        </h3>
+
+        <div class="pillset">
+          <span class="pill">PyTorch</span>
+          <span class="pill">TensorFlow</span>
+          <span class="pill">Transformers</span>
+          <span class="pill">Multimodal Learning</span>
+          <span class="pill">Fusion Strategies</span>
+          <span class="pill">Model Benchmarking</span>
+          <span class="pill">Ablation Studies</span>
+        </div>
+      </div>
+
+
+      <div class="card" data-aos="fade-up" data-aos-delay="150">
+        <h3>
+          <i class="fas fa-search" style="color: var(--primary); margin-right: 0.5rem;"></i>
+          Information Retrieval
+        </h3>
+
         <div class="pillset">
           <span class="pill">Hybrid Retrieval</span>
           <span class="pill">Vector Search</span>
-          <span class="pill">Reciprocal Rank Fusion</span>
           <span class="pill">BM25</span>
+          <span class="pill">RRF</span>
           <span class="pill">SentenceTransformers</span>
+          <span class="pill">Chroma</span>
         </div>
       </div>
 
-      <div class="card" data-aos="fade-up" data-aos-delay="150">
-        <h3><i class="fas fa-tools" style="color: var(--primary); margin-right: 0.5rem;"></i>MLOps & Backend</h3>
+
+      <div class="card" data-aos="fade-up" data-aos-delay="250">
+        <h3>
+          <i class="fas fa-database" style="color: var(--primary); margin-right: 0.5rem;"></i>
+          Backend & Data
+        </h3>
+
         <div class="pillset">
-          <span class="pill">FastAPI</span>
-          <span class="pill">Docker</span>
-          <span class="pill">Basic CI/CD</span>
-          <span class="pill">Experiment Tracking</span>
-          <span class="pill">Latency Monitoring</span>
-          <span class="pill">Cost Monitoring</span>
+          <span class="pill">Python</span>
+          <span class="pill">SQL</span>
+          <span class="pill">REST APIs</span>
+          <span class="pill">MongoDB</span>
+          <span class="pill">Data Preprocessing</span>
+          <span class="pill">Feature Engineering</span>
         </div>
       </div>
 
       <div class="card" data-aos="fade-up" data-aos-delay="200">
-        <h3><i class="fas fa-cloud" style="color: var(--primary); margin-right: 0.5rem;"></i>Frontend & Product Engineering</h3>
+        <h3>
+          <i class="fas fa-server" style="color: var(--primary); margin-right: 0.5rem;"></i>
+          MLOps & Production AI
+        </h3>
+
         <div class="pillset">
-          <span class="pill">React</span>
-          <span class="pill">API Integration</span>
-          <span class="pill">AI-Powered Interfaces</span>
-          <span class="pill">Full-Stack Prototyping</span>
+          <span class="pill">LLMOps</span>
+          <span class="pill">FastAPI</span>
+          <span class="pill">Docker</span>
+          <span class="pill">Model Serving Basics</span>
+          <span class="pill">Monitoring</span>
+          <span class="pill">Observability</span>
+          <span class="pill">Experiment Tracking</span>
+          <span class="pill">ETL Pipelines</span>
+          <span class="pill">CI/CD Basics</span>
         </div>
       </div>
 
       <div class="card" data-aos="fade-up" data-aos-delay="250">
-        <h3><i class="fas fa-database" style="color: var(--primary); margin-right: 0.5rem;"></i>Languages & Data Stores</h3>
+        <h3>
+          <i class="fas fa-database" style="color: var(--primary); margin-right: 0.5rem;"></i>
+          Language
+        </h3>
+
         <div class="pillset">
-          <span class="pill">Python</span>
-          <span class="pill">English B2</span>
-          <span class="pill">MongoDB</span>
-          <span class="pill">Chroma</span>
+          <span class="pill">English (Upper-Intermediate B2) – Effective professional communication)</span>
         </div>
       </div>
+
     </section>
 
     <!-- PROJECTS -->
     <section id="publications" class="section container">
       <h2 data-aos="fade-up">Projects</h2>
+
       <div class="card" data-aos="fade-up" data-aos-delay="100">
-        <h3><i class="fas fa-book" style="color: var(--primary); margin-right: 0.5rem;"></i>Job Resume Matching System</h3>
+        <h3>
+          <i class="fas fa-book" style="color: var(--primary); margin-right: 0.5rem;"></i>
+          Job Resume Matching System
+        </h3>
+
+        <div style="margin-top:10px;">
+          <a href="https://github.com/lhgiang040504/Job-Resume-Matching-Project" class="btn">GitHub</a>
+        </div>
+
         <p><em>Nov 2024 - Jan 2025</em></p>
-        <p><strong>Tech:</strong> Python, FastAPI, MongoDB, React, LangChain, LLaMA 3, SentenceTransformers</p>
+
+        <p>
+          <strong>Tech:</strong>
+          Python, FastAPI, MongoDB, React, LangChain, LLaMA 3, SentenceTransformers
+        </p>
+
         <ul>
-          <li>Built a full-stack <strong>RAG system</strong> with custom similarity scoring for resume-job matching.</li>
-          <li>Delivered more relevant job recommendations with <strong>&lt;2s latency</strong> on 400+ scraped job descriptions and 100+ real resumes.</li>
+          <li>Built and deployed a full-stack AI-powered resume-job matching platform using <strong>RAG</strong> and semantic search.</li>
+
+          <li>Developed a retrieval pipeline achieving <strong>context precision@5 of 0.87</strong>, outperforming keyword-based matching approaches.</li>
+
+          <li>Designed ETL workflows for parsing PDF resumes, preprocessing data, and generating embeddings for <strong>30+ CVs</strong>.</li>
+
+          <li>Built RESTful APIs with streaming support, delivering recommendations with <strong>&lt; 5s response time</strong>.</li>
+
+          <li>Implemented observability for inference latency, token usage, and system monitoring in a production-like environment.</li>
         </ul>
       </div>
 
+
+
       <div class="card" data-aos="fade-up" data-aos-delay="150">
-        <h3><i class="fas fa-book" style="color: var(--primary); margin-right: 0.5rem;"></i>Modular Retrieval-Augmented Generation System</h3>
+        <h3>
+          <i class="fas fa-book" style="color: var(--primary); margin-right: 0.5rem;"></i>
+          Modular Retrieval-Augmented Generation (RAG) System
+        </h3>
+        
+        <div style="margin-top:10px;">
+          <a href="https://github.com/lhgiang040504/sematic_search" class="btn">GitHub</a>
+        </div>
+
         <p><em>Jan 2025 - May 2025</em></p>
-        <p><strong>Tech:</strong> Python, FastAPI, MongoDB, LangChain, SentenceTransformers, Chroma</p>
+
+        <p>
+          <strong>Tech:</strong>
+          Python, FastAPI, MongoDB, LangChain, SentenceTransformers, Chroma
+        </p>
+
         <ul>
-          <li>Designed a modular RAG pipeline with multiple query strategies.</li>
-          <li>Improved retrieval quality by <strong>22%</strong> with <strong>p95 latency &lt; 1.8s</strong>, evaluated on MS MARCO and Cranfield benchmark datasets.</li>
+          <li>Designed an agentic RAG workflow with query decomposition and <strong>Reciprocal Rank Fusion (RRF)</strong>, improving retrieval quality by <strong>22%</strong>.</li>
+
+          <li>Built scalable APIs with monitoring for <strong>p95 latency (&lt;1.8s)</strong>, token usage, and system performance.</li>
+
+          <li>Evaluated retrieval performance on <strong>MS MARCO</strong> and custom datasets using RAG evaluation metrics.</li>
+
+          <li>Applied production-oriented practices including logging, latency tracking, caching strategies, and cost monitoring.</li>
         </ul>
       </div>
     </section>
