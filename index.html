@@ -1895,8 +1895,8 @@
         box-shadow: none;
       }
 
-      #publications .card,
-      #achievements .card {
+      #projects .card,
+      #publications .card {
         border-left: 4px solid var(--primary);
       }
 
@@ -2390,7 +2390,7 @@
     </section>
 
     <!-- PROJECTS -->
-    <section id="publications" class="section container">
+    <section id="projects" class="section container">
       <h2 data-aos="fade-up">Projects</h2>
 
       <div class="card" data-aos="fade-up" data-aos-delay="100">
@@ -2455,7 +2455,7 @@
     </section>
 
     <!-- PUBLICATIONS -->
-    <section id="achievements" class="section container">
+    <section id="publications" class="section container">
       <h2 data-aos="fade-up">Publications</h2>
 
       <div class="card" data-aos="fade-up" data-aos-delay="100">
@@ -2624,7 +2624,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p>&copy; <span id="year"></span> GIANG LE HUYNH. Built for applied AI engineering and research.</p>
+        <p>&copy; <span id="year"></span> GIANG LE HUYNH. Built for applied AI engineering and Research.</p>
       </div>
     </footer>
     </div>
@@ -2700,6 +2700,196 @@
           vi: ['Bài báo IEEE', 'Năm tốt nghiệp', 'Hợp tác nghiên cứu', 'Công nghệ']
         },
         {
+          selector: '#experience h2',
+          vi: ['Kinh nghiệm']
+        },
+        {
+          selector: '#experience .titem h3',
+          vi: ['InsecLab (Phòng thí nghiệm đại học)', 'pi-labs.ai']
+        },
+        {
+          selector: '#experience .titem h4',
+          vi: [
+            'Tác giả chính (Trưởng nhóm nghiên cứu)',
+            'Tác giả chính (Trưởng nhóm nghiên cứu)',
+            'Đồng tác giả (Contributor)',
+            'Hợp tác nghiên cứu AI'
+          ]
+        },
+        {
+          selector: '#experience .titem > p:first-of-type em',
+          vi: ['11 tháng | Hybrid', 'Tháng 9/2025 - Tháng 12/2025 · 4 tháng | Remote']
+        },
+        {
+          selector: '#experience h4 + p em',
+          vi: [
+            'Tháng 11/2025 - Tháng 3/2026 · 5 tháng',
+            'Tháng 8/2025 - Tháng 11/2025 · 4 tháng',
+            'Tháng 5/2025 - Tháng 8/2025 · 4 tháng',
+            'Tháng 9/2025 - Tháng 12/2025 · 4 tháng | Remote'
+          ]
+        },
+        {
+          selector: '#experience li',
+          vi: [
+            'Xây dựng pipeline xử lý dữ liệu cho các đồ thị smart contract không đồng nhất dùng trong hệ thống phát hiện lỗ hổng.',
+            'Triển khai quy trình tiền xử lý và xây dựng đồ thị bằng Python để chuyển mã contract thô thành biểu diễn đồ thị có cấu trúc.',
+            'Tích hợp embedding từ LLM với biểu diễn đồ thị bằng các kiến trúc hybrid fusion.',
+            'Tạo mẫu smart contract đối kháng để cải thiện độ bền vững và hỗ trợ đánh giá quy mô lớn.',
+            'Phát triển pipeline học máy đa phương thức cho phát hiện lỗ hổng smart contract, đạt <strong>0.823 F1-score</strong> và <strong>96.73% accuracy</strong>.',
+            'Xây dựng quy trình tiền xử lý và trích xuất đặc trưng từ nhiều bộ dữ liệu (Prime, HuggingFace Slither-Audited).',
+            'Triển khai pipeline deep learning kết hợp semantic embeddings và biểu diễn dựa trên opcode.',
+            'Thiết kế và benchmark nhiều chiến lược fusion, bao gồm attention-based và hybrid architectures.',
+            'Thiết kế workflow prompt có cấu trúc để cải thiện tính nhất quán trong phân tích lỗ hổng tự động.',
+            'Xây dựng pipeline prompt sáu giai đoạn tích hợp định nghĩa vai trò, xác minh, phản biện và chiến lược suy luận.',
+            'Đánh giá và tối ưu hiệu năng LLM trên nhiều cấu hình mô hình.',
+            'Làm việc trên bài toán phát hiện bất thường viễn thông sử dụng dữ liệu CDR/IPDR trong hợp tác với doanh nghiệp.',
+            'Xác định phạm vi dự án, schema dữ liệu và chiến lược đánh giá.',
+            'Triển khai pipeline tạo dữ liệu tổng hợp và mô phỏng bất thường.',
+            'Khám phá mở rộng đa phương thức kết hợp CDR với tín hiệu voice/text cho hệ thống phát hiện gian lận.'
+          ]
+        },
+        {
+          selector: '#skills h2',
+          vi: ['Kỹ năng kỹ thuật']
+        },
+        {
+          selector: '#skills .card h3',
+          vi: [
+            'LLM & AI tạo sinh',
+            'Machine Learning & Nghiên cứu AI',
+            'Truy hồi thông tin',
+            'Backend & Dữ liệu',
+            'MLOps & AI Production',
+            'Ngôn ngữ'
+          ]
+        },
+        {
+          selector: '#skills .pill',
+          vi: [
+            'RAG nâng cao', 'Agentic Workflows', 'Lang Community', 'LlamaIndex', 'Prompt Engineering', 'Tool Calling', 'Function Calling', 'Đánh giá LLM', 'LoRA / QLoRA', 'LLaMA', 'OpenAI API',
+            'PyTorch', 'TensorFlow', 'Transformers', 'Học đa phương thức', 'Chiến lược fusion', 'Benchmark mô hình', 'Ablation Studies',
+            'Hybrid Retrieval', 'Vector Search', 'BM25', 'RRF', 'SentenceTransformers', 'Chroma',
+            'Python', 'SQL', 'REST APIs', 'MongoDB', 'Tiền xử lý dữ liệu', 'Feature Engineering',
+            'LLMOps', 'FastAPI', 'Docker', 'Kiến thức cơ bản về Model Serving', 'Monitoring', 'Observability', 'Experiment Tracking', 'ETL Pipelines', 'CI/CD cơ bản',
+            'Tiếng Anh (Upper-Intermediate B2) - giao tiếp chuyên nghiệp hiệu quả'
+          ]
+        },
+        {
+          selector: '#projects h2',
+          vi: ['Dự án']
+        },
+        {
+          selector: '#projects h3',
+          vi: ['Hệ thống ghép nối CV và việc làm', 'Hệ thống Retrieval-Augmented Generation (RAG) dạng mô-đun']
+        },
+        {
+          selector: '#projects .btn',
+          vi: ['GitHub', 'GitHub']
+        },
+        {
+          selector: '#projects .card > p',
+          vi: [
+            '<em>Tháng 11/2024 - Tháng 1/2025</em>',
+            '<strong>Tech:</strong> Python, FastAPI, MongoDB, React, LangChain, LLaMA 3, SentenceTransformers',
+            '<em>Tháng 1/2025 - Tháng 5/2025</em>',
+            '<strong>Tech:</strong> Python, FastAPI, MongoDB, LangChain, SentenceTransformers, Chroma'
+          ]
+        },
+        {
+          selector: '#projects li',
+          vi: [
+            'Xây dựng và triển khai nền tảng ghép nối CV-việc làm full-stack sử dụng <strong>RAG</strong> và semantic search.',
+            'Phát triển pipeline truy hồi đạt <strong>context precision@5 là 0.87</strong>, vượt trội hơn các phương pháp khớp từ khóa.',
+            'Thiết kế workflow ETL để phân tích CV PDF, tiền xử lý dữ liệu và tạo embedding cho <strong>30+ CV</strong>.',
+            'Xây dựng RESTful API có hỗ trợ streaming, trả về gợi ý với <strong>thời gian phản hồi &lt; 5s</strong>.',
+            'Triển khai observability cho độ trễ inference, token usage và giám sát hệ thống trong môi trường gần production.',
+            'Thiết kế workflow agentic RAG với query decomposition và <strong>Reciprocal Rank Fusion (RRF)</strong>, cải thiện chất lượng truy hồi <strong>22%</strong>.',
+            'Xây dựng API có khả năng mở rộng với monitoring cho <strong>p95 latency (&lt;1.8s)</strong>, token usage và hiệu năng hệ thống.',
+            'Đánh giá hiệu năng truy hồi trên <strong>MS MARCO</strong> và dữ liệu tùy chỉnh bằng các metric đánh giá RAG.',
+            'Áp dụng thực hành hướng production gồm logging, latency tracking, caching strategies và cost monitoring.'
+          ]
+        },
+        {
+          selector: '#publications h2',
+          vi: ['Công bố khoa học']
+        },
+        {
+          selector: '#publications h3',
+          vi: [
+            'Prompt-Based Smart Contract Analysis',
+            'Multimodal Smart Contract Security',
+            'Tích hợp LLM và đồ thị cho bảo mật smart contract'
+          ]
+        },
+        {
+          selector: '#publications .card > p',
+          vi: [
+            '<em>Đồng tác giả, Hội nghị IEEE MAPR 2025</em>',
+            '<em>Tác giả chính, Hội nghị IEEE ISCIT 2025</em>',
+            '<em>Tác giả chính, Submitted (2026)</em>'
+          ]
+        },
+        {
+          selector: '#publications .btn',
+          vi: ['Bài báo', 'Bài báo']
+        },
+        {
+          selector: '#publications li',
+          vi: [
+            'Thiết kế và triển khai <strong>pipeline prompt có cấu trúc sáu giai đoạn</strong> để cải thiện tính nhất quán suy luận và giảm hallucination trong kiểm toán smart contract bằng LLM.',
+            'Đánh giá nhiều LLM, bao gồm <strong>OpenAI o-series</strong> và <strong>Llama models</strong>, trên các tình huống thực tế.',
+            'Cải thiện độ bền vững và độ tin cậy của phân tích thông qua tối ưu prompt và workflow suy luận nhiều giai đoạn.',
+            'Dẫn dắt phát triển pipeline deep learning đa phương thức đạt <strong>0.823 F1-score</strong> và <strong>96.73% accuracy</strong> cho phát hiện lỗ hổng.',
+            'Xây dựng pipeline tiền xử lý thống nhất và benchmark <strong>năm chiến lược fusion</strong>, bao gồm attention-based và hybrid architectures.',
+            'Đề xuất multi-perspective embedding fusion để nắm bắt đặc trưng ngữ nghĩa và cấu trúc của smart contract.',
+            'Dẫn dắt thiết kế kiến trúc và triển khai hệ thống hybrid kết hợp LLM embeddings với heterogeneous graph neural networks.',
+            'Xây dựng pipeline tiền xử lý cho graph construction và adversarial sample generation nhằm cải thiện độ bền vững của mô hình.',
+            'Thực hiện benchmark và ablation studies mở rộng trên nhiều cấu hình mô hình.'
+          ]
+        },
+        {
+          selector: '#education h2',
+          vi: ['Học vấn']
+        },
+        {
+          selector: '#education h3',
+          vi: ['Cử nhân Khoa học Máy tính']
+        },
+        {
+          selector: '#education .card > p',
+          vi: [
+            '<strong>Trường Đại học Công nghệ Thông tin (UIT), Đại học Quốc gia TP.HCM</strong>',
+            '<em>2022 - 2026</em>',
+            '<strong>Chuyên ngành:</strong> Trí tuệ nhân tạo và An toàn thông tin',
+            '<strong>Môn học liên quan:</strong> Trí tuệ nhân tạo, Machine Learning, Deep Learning, Data Mining, MLOps'
+          ]
+        },
+        {
+          selector: '#certificates h2',
+          vi: ['Trọng tâm nghiên cứu']
+        },
+        {
+          selector: '#certificates h4',
+          vi: ['Bảo mật Blockchain', 'Hệ thống truy hồi', 'Hệ thống AI ứng dụng']
+        },
+        {
+          selector: '#certificates .cert-meta p',
+          vi: [
+            'Phát hiện lỗ hổng smart contract bằng LLM, embeddings và biểu diễn dựa trên đồ thị.',
+            'Hybrid retrieval, vector search, RAG pipelines và đánh giá truy hồi dựa trên benchmark.',
+            'Dịch vụ FastAPI, giao diện React, experiment tracking và nguyên mẫu sản phẩm AI chú trọng độ trễ.'
+          ]
+        },
+        {
+          selector: '#contact h2',
+          vi: ['Liên hệ']
+        },
+        {
+          selector: '#contact .contact-item h4',
+          vi: ['Email', 'Điện thoại', 'LinkedIn', 'GitHub']
+        },
+        {
           selector: '.footer p',
           vi: ['&copy; <span id="year"></span> GIANG LE HUYNH. Được xây dựng cho kỹ thuật AI ứng dụng và nghiên cứu.']
         },
@@ -2712,31 +2902,26 @@
         {
           selector: '.hero .cta-row',
           attribute: 'aria-label',
-          vi: ['HÃ nh Ä‘á»™ng chÃ­nh']
+          vi: ['Hành động chính']
         },
         {
           selector: '.hero-panel',
           attribute: 'aria-label',
-          vi: ['Trá»ng tÃ¢m AI hiá»‡n táº¡i']
+          vi: ['Trọng tâm AI hiện tại']
         },
         {
           selector: '#backToTop',
           attribute: 'aria-label',
-          vi: ['LÃªn Ä‘áº§u trang']
+          vi: ['Lên đầu trang']
         }
       ];
-
-      const lowerContentSelectors = ['#experience', '#skills', '#publications', '#achievements', '#education', '#certificates', '#contact'];
-      const activeTranslationGroups = translationGroups.filter((group) => (
-        !lowerContentSelectors.some((selector) => group.selector.startsWith(selector))
-      ));
 
       const originalHtml = new Map();
       const originalAttributes = new Map();
 
       const keyFor = (selector, index, attribute) => `${selector}::${index}${attribute ? `::${attribute}` : ''}`;
 
-      activeTranslationGroups.forEach((group) => {
+      translationGroups.forEach((group) => {
         document.querySelectorAll(group.selector).forEach((element, index) => {
           originalHtml.set(keyFor(group.selector, index), element.innerHTML);
         });
@@ -2778,7 +2963,7 @@
       const applyLanguage = (language) => {
         currentLanguage = language === 'vi' ? 'vi' : 'en';
         document.documentElement.lang = currentLanguage === 'vi' ? 'vi' : 'en';
-        document.title = currentLanguage === 'vi' ? 'XXX - Ká»¹ sÆ° AI' : originalTitle;
+        document.title = currentLanguage === 'vi' ? 'GIANG LE HUYNH - Kỹ sư AI' : originalTitle;
         if (metaDescription) {
           metaDescription.setAttribute(
             'content',
@@ -2788,7 +2973,7 @@
           );
         }
 
-        activeTranslationGroups.forEach((group) => {
+        translationGroups.forEach((group) => {
           document.querySelectorAll(group.selector).forEach((element, index) => {
             const original = originalHtml.get(keyFor(group.selector, index));
             const translated = group.vi[index];
@@ -2805,7 +2990,7 @@
         });
 
         languageButton.textContent = currentLanguage === 'vi' ? 'VIE' : 'ENG';
-        languageButton.setAttribute('aria-label', currentLanguage === 'vi' ? 'Switch to English' : 'Chuyá»ƒn sang tiáº¿ng Viá»‡t');
+        languageButton.setAttribute('aria-label', currentLanguage === 'vi' ? 'Switch to English' : 'Chuyển sang tiếng Việt');
         storeLanguage(currentLanguage);
         setYear();
       };
