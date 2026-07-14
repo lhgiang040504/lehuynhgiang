@@ -1,0 +1,372 @@
+\documentclass[10pt, letterpaper]{article}
+\usepackage{tabularx}
+\usepackage{booktabs}      % For \specialrule and \addlinespace
+\usepackage{xcolor}        % For light gray rule color
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage[explicit]{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0,0,0} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Giang's CV},
+    pdfauthor={Giang Le Huynh},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage[default, type1]{sourcesanspro} 
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small Giang Le Huynh - Page \thepage{} of \pageref*{LastPage}}
+}{}{} % replace number by desired string
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{
+    % avoid page braking right after the section title
+    \needspace{4\baselineskip}
+    % make the font size of the section title large and color it with the primary color
+    \Large\color{primaryColor}
+}{
+}{
+}{
+    % print bold title, give 0.15 cm space and draw a line of 0.8 pt thickness
+    % from the end of the title to the end of the body
+    \textbf{#1}\hspace{0.15cm}\titlerule[0.8pt]\hspace{-0.1cm}
+}[] % section title formatting
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.1 cm
+}{
+    % bottom space:
+    0.1 cm
+} % section title spacing
+
+% \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.1 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{1 cm, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for three column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\color{primaryColor}\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Last updated in July 2026}\hspace{\widthof{Last updated in July 2026}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \placelastupdatedtext
+    \begin{header}
+        \fontsize{35 pt}{35 pt}
+        \textbf{GIANG LE HUYNH}
+        \\
+        \vspace{0.1 cm}
+
+        \fontsize{20 pt}{20 pt}
+        \textbf{AI Engineer}
+
+        \vspace{0.1 cm}
+
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:lhgiang040504@gmail.com}{{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}lhgiang040504@gmail.com}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:0812206773}{{\footnotesize\faPhone*}\hspace*{0.13cm}0812 206 773}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/lhgiang040504}{{\footnotesize\faLinkedinIn}\hspace*{0.13cm}lhgiang040504}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://github.com/lhgiang040504}{{\footnotesize\faGithub}\hspace*{0.13cm}lhgiang040504}}%
+    \end{header}
+
+    \vspace{0.3 cm - 0.3 cm}
+
+    % ------------------------------------------------------------------------------------------
+
+% \section{Professional Summary}
+% \begin{onecolentry}
+%     Computer Science graduate specializing in Generative AI and Large Language Models (LLMs). Built RAG pipelines, agent-based workflows, and multimodal systems through research and hands-on projects.
+
+%     \vspace{0.2 cm}
+
+%     Experience across the full AI lifecycle: data processing, model experimentation, evaluation, and deployment. Interested in applying LLMs to real-world problems, especially smart contract security. Seeking an AI Engineer role to contribute to production-ready GenAI systems.
+% \end{onecolentry}
+
+% ------------------------------------------------------------------------------------------
+
+\section{Experience}
+\begin{onecolentry}
+    \textbf{AI Engineer – FunAI (Functional AI Partners)} \hfill \textit{2026 -- Present}
+    \begin{highlights}
+\item Lead delivery of \textbf{multiple production ``Digital Staff'' AI agents} for enterprise B2B clients (Singapore, Japan) --- from client scoping to architecture, deployment, and operations
+\item Built agentic LLM systems on \textbf{LangGraph + FastAPI}: a WhatsApp onboarding assistant (distributed locking, human-in-the-loop) and a document-classification agent across \textbf{16+ n8n workflows}
+\item Shipped a multi-agent \textbf{Japanese voice-AI} (ElevenLabs; 68-case test suite) and a face-detection \& clustering pipeline (YOLO, InsightFace, HDBSCAN) on a \textbf{5 GB+} full-stack platform
+\end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{onecolentry}
+    \textbf{AI Researcher – InsecLab (University Lab)} \hfill \textit{Feb 2025 -- Present}
+    \begin{highlights}
+\item Published \textbf{2 IEEE papers} (1 first-author) on LLM- and multimodal-based smart contract vulnerability detection
+\item Designed structured prompt pipelines (agent-role chaining) and built scalable embedding/graph pipelines for benchmarking and ablation studies
+\end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{onecolentry}
+    \textbf{AI Research Collaboration – Pi Labs AI (India Company)} \hfill \textit{Sep 2025 -- Dec 2025}
+    \begin{highlights}
+\item Built anomaly detection for telecom data (CDR/IPDR) in an industry collaboration; helped define problem scope and evaluation criteria
+\item Evaluated RAG frameworks (KAG) and explored graph-based/multimodal approaches (CDR + voice/text) for fraud detection
+\end{highlights}
+\end{onecolentry}
+
+% ------------------------------------------------------------------------------------------
+
+\section{Projects}
+\begin{onecolentry}
+    \textbf{Job Resume Matching System} \hfill \textit{Nov 2024 – Jan 2025} \\
+    \href{https://github.com/lhgiang040504/Job-Resume-Matching-Project}{GitHub}
+   
+    \textbf{Tech}: Python, FastAPI, MongoDB, React, LangChain, LLaMA 3, SentenceTransformers
+   
+    \begin{highlights}
+        % \item Built a full-stack RAG system for matching resumes to job descriptions using semantic search
+        % \item Achieved \textbf{precision@5 of 0.87}, outperforming keyword-based methods
+        % \item Processed PDF resumes and generated embeddings via automated ETL pipeline
+        % \item Enabled real-time recommendations with streaming APIs \textbf{(<2s response time)}
+        % \item Monitored system performance including latency and token usage
+\item Built a full-stack RAG system with \textbf{custom similarity scoring for resume–job matching}
+\item Delivered more relevant job recommendations with \textbf{<2s latency} on 400+ scraped job descriptions and 100+ real resumes
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.2 cm}
+
+\begin{onecolentry}
+    \textbf{Modular Retrieval-Augmented Generation (RAG) System} \hfill \textit{Jan 2025 – May 2025} \\
+    \href{https://github.com/lhgiang040504/sematic_search}{GitHub}
+   
+    \textbf{Tech}: Python, FastAPI, MongoDB, LangChain, SentenceTransformers, Chroma
+   
+    \begin{highlights}
+        % \item Designed a modular RAG pipeline with query decomposition and hybrid retrieval (RRF)
+        % \item Improved retrieval quality, increasing relevant context by \textbf{22\%}
+        % \item Built scalable backend with p95 latency < 1.8s for real-time querying
+        % \item Evaluated system performance using RAGAS on benchmark and custom datasets
+        % \item Applied production practices: logging, caching, and cost tracking
+\item Designed a modular RAG pipeline with\textbf{ multiple query strategies}
+\item Improved retrieval quality by \textbf{22\%} with p95 latency < 1.8s, evaluated on benchmark datasets (\textbf{MS MARCO}, \textbf{Cranfield})
+    \end{highlights}
+\end{onecolentry}
+
+% ------------------------------------------------------------------------------------------
+
+\section{Publications}
+\begin{onecolentry}
+    \href{https://ieeexplore.ieee.org/abstract/document/11133797}{Prompt-Based Smart Contract Analysis} \hfill \textit{Co-Author, IEEE MAPR 2025 Conference}
+    
+    % \begin{highlights}
+    %     % \item Designed a structured prompt pipeline improving reasoning consistency and reducing hallucination in LLM-based auditing
+    %     % \item Evaluated multiple LLMs (OpenAI o-series, LLaMA) across smart contract datasets
+    %     % \item Designed a structured prompt pipeline improving reasoning consistency and reducing hallucination in LLM-based auditing
+    %     % \item Evaluated multiple LLMs across smart contract datasets
+    % \end{highlights}
+\end{onecolentry}
+
+% \vspace{0.2 cm}
+
+\begin{onecolentry}
+    \href{https://ieeexplore.ieee.org/abstract/document/11231648}{Multimodal Approach for Smart Contract Security} \hfill \textit{First Author, IEEE ISCIT 2025 Conference} 
+    % \begin{highlights}
+    %     % \item Developed a multimodal deep learning pipeline for smart contract vulnerability detection, achieving \textbf{0.823 F1-score} and \textbf{96.73\% accuracy}
+    %     % \item Benchmarked five different fusion strategies (early fusion, late fusion, self-attention, cross-attention, and hybrid)
+    %     % \item Proposed a multi-perspective embedding fusion method to combine code semantics and structural features
+    %     % \item Built a multimodal pipeline achieving \textbf{F1-score 0.823} and \textbf{96.7\% accuracy}
+    %     % \item Benchmarked fusion strategies and proposed improved embedding methods
+    % \end{highlights}
+\end{onecolentry}
+
+% \vspace{0.2 cm}
+
+% \begin{onecolentry}
+%     \textbf{Integrating LLMs and Heterogeneous Graphs for Smart Contract Security} \textit{First Author, Submitted (2026)} \\
+%     \begin{highlights}
+%         % \item Designed a hybrid architecture combining LLM embeddings with heterogeneous graph neural networks
+%         % \item Built preprocessing pipelines for graph construction and adversarial sample generation
+%         % \item Conducted extensive ablation studies and model benchmarking experiments
+%         \item Designed a hybrid system combining LLM embeddings with graph neural networks
+%         \item Built data pipelines and conducted large-scale model evaluation
+%     \end{highlights}
+% \end{onecolentry}
+
+% ------------------------------------------------------------------------------------------
+
+\section{Education}
+\begin{threecolentry}{\textbf{B.S.}}{2022 – 2026}
+        \textbf{University of Information Technology (UIT), VNU-HCM} \\
+        \textbf{Major}: Computer Science \\
+        \textbf{Specialization}: Artificial Intelligence and Information Security \\
+        \textbf{Relevant Coursework}: Artificial Intelligence, Machine Learning, Deep Learning, Data Mining, MLOps, AI Systems
+\end{threecolentry}
+
+% ------------------------------------------------------------------------------------------
+
+% \section{Interests}
+% \begin{onecolentry}
+%     Football, badminton, team sports, and community activities. Passionate about knowledge sharing, collaborative development, and using AI to solve meaningful real-world problems in security and productivity.
+% \end{onecolentry}
+
+% ------------------------------------------------------------------------------------------
+
+\section{Skills}
+\begin{onecolentry}
+\textbf{Generative AI \& LLMs:} Multi-agent \& agentic workflows (LangGraph, ReAct), RAG, Voice AI (ElevenLabs), Prompt Engineering, LLM Evaluation
+
+\vspace{0.1 cm}
+
+\textbf{Full-Stack \& Cloud:} Next.js/React, TypeScript, FastAPI, Supabase/pgvector, n8n, Vercel/Railway, Firebase
+
+\vspace{0.1 cm}
+
+\textbf{MLOps \& Production:} Docker, CI/CD, prompt caching, streaming, monitoring (latency, cost), experiment tracking
+
+\vspace{0.1 cm}
+
+\textbf{Retrieval \& Data:} Hybrid Retrieval, Vector Search, RRF, BM25, SentenceTransformers, SQL, MongoDB
+
+\vspace{0.1 cm}
+
+\textbf{Languages:} English (Upper-Intermediate B2 – Effective professional communication)
+\end{onecolentry}
+
+\end{document}
