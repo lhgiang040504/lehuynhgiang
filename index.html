@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>GIANG LE HUYNH - AI Engineer</title>
-    <meta name="description" content="GIANG LE HUYNH" />
+    <meta name="description" content="Giang Le Huynh - AI Engineer building production LLM systems: multi-agent workflows (LangGraph), RAG, voice AI, and evaluation. 2 IEEE publications on prompt engineering and smart contract security." />
     <style>
       :root {
         --bg: #0b0f0c;              /* very dark greenish */
@@ -2087,6 +2087,30 @@
           padding: 3.6rem 0;
         }
       }
+
+      /* --- CJK typography (applies when the page is switched to Chinese) --- */
+      html[lang^="zh"] body,
+      html[lang^="zh"] .pill,
+      html[lang^="zh"] .btn {
+        font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+          "Noto Sans SC", "Noto Sans CJK SC", "Source Han Sans SC",
+          Inter, "Segoe UI", system-ui, sans-serif;
+      }
+      html[lang^="zh"] body {
+        line-height: 1.85;
+        letter-spacing: 0.01em;
+      }
+      html[lang^="zh"] .side-rail,
+      html[lang^="zh"] .top-strip,
+      html[lang^="zh"] .stat-label {
+        letter-spacing: 0.02em;
+      }
+      html[lang^="zh"] .hero h1 .accent {
+        letter-spacing: 0.04em;
+      }
+      .lang-toggle {
+        min-width: 52px;
+      }
     </style>
   </head>
   <body>
@@ -2134,7 +2158,7 @@
       <div class="container hero-content" data-aos="fade-up" data-aos-duration="800">
   <h1><span class="hero-label">Personal Portfolio</span><span class="accent">AI<br>ENGINEER</span></h1>
         <figure class="hero-portrait">
-          <img src="personal/0812206773_1_3x4.jpg" alt="XXX portrait" />
+          <img src="personal/0812206773_1_3x4.jpg" alt="Giang Le Huynh portrait" />
         </figure>
         <p>I'm Giang - a new-generation AI Engineer who takes an LLM product through its whole lifecycle: scoping the solution with the client, then architecture, full-stack build, DevOps, and running it in production. I've led and shipped agentic assistants, RAG systems, Japanese voice-AI, and computer-vision pipelines now serving real B2B clients across Singapore and Japan - turning messy problems into AI that's reliable, fast, and cost-efficient. Grounded by published IEEE research, I don't just prototype models; I ship them and keep them running at scale.</p>
         <div class="cta-row" aria-label="primary actions">
@@ -2720,38 +2744,54 @@
       const translationGroups = [
         {
           selector: '.skip-link',
-          vi: ['Bỏ qua đến nội dung chính']
+          vi: ['Bỏ qua đến nội dung chính'],
+          zh: ['跳转到主要内容']
         },
         {
           selector: '.top-strip span',
           vi: [
             'Chào mừng đến với GIANG LE HUYNH, kỹ sư AI',
             'LHGIANG040504@GMAIL.COM | +84 812 206 773'
+          ],
+          zh: [
+            '欢迎访问 黎黄江 (GIANG LE HUYNH) — AI 工程师',
+            'LHGIANG040504@GMAIL.COM | +84 812 206 773'
           ]
         },
         {
           selector: '.links a',
-          vi: ['Kinh nghiệm', 'Kỹ năng', 'Dự án', 'Công bố', 'Học vấn', 'Trọng tâm', 'Liên hệ']
+          vi: ['Kinh nghiệm', 'Kỹ năng', 'Dự án', 'Công bố', 'Học vấn', 'Trọng tâm', 'Liên hệ'],
+          zh: ['工作经历', '技术能力', '项目经历', '学术论文', '教育背景', '研究方向', '联系方式']
         },
         {
           selector: '.side-rail',
-          vi: ['Kỹ sư AI | RAG | LLM | Bảo mật Blockchain']
+          vi: ['Kỹ sư AI | RAG | LLM | Bảo mật Blockchain'],
+          zh: ['AI 工程师 | 大语言模型 | RAG | 智能体 | AI 研究']
         },
         {
           selector: '.hero-label',
-          vi: ['Hồ sơ kỹ sư AI']
+          vi: ['Hồ sơ kỹ sư AI'],
+          zh: ['个人作品集']
         },
         {
           selector: '.hero h1 .accent',
-          vi: ['KỸ SƯ<br>AI']
+          vi: ['KỸ SƯ<br>AI'],
+          zh: ['AI<br>工程师']
+        },
+        {
+          selector: '.hero-content > p',
+          vi: ['Tôi là Giang - một AI Engineer thế hệ mới, người đưa một sản phẩm LLM đi qua trọn vòng đời: cùng khách hàng làm rõ giải pháp, rồi tới kiến trúc, xây dựng full-stack, DevOps và vận hành trên production. Tôi đã dẫn dắt và ship các trợ lý agentic, hệ thống RAG, voice-AI tiếng Nhật và pipeline computer vision đang phục vụ khách hàng B2B thật tại Singapore và Nhật Bản - biến những bài toán ngổn ngang thành AI đáng tin cậy, nhanh và tối ưu chi phí. Với nền tảng nghiên cứu đã công bố tại IEEE, tôi không chỉ làm prototype; tôi ship chúng và giữ chúng chạy ở quy mô thực tế.'],
+          zh: ['我是黎黄江（Giang）—— 一名新生代 AI 工程师，能把一个大模型产品走完完整生命周期：先与客户共同梳理方案，再到架构设计、全栈开发、DevOps，以及上线后的持续运维。我主导并交付过智能体助手、RAG 系统、日语语音 AI 与计算机视觉流水线，目前正服务于新加坡与日本的真实 B2B 客户 —— 把杂乱的业务问题变成可靠、快速且成本可控的 AI 系统。以已发表的 IEEE 论文作为研究底座，我不只做原型，而是把它们真正上线并持续运行在规模化环境中。']
         },
         {
           selector: '.hero .btn',
-          vi: ['Liên hệ', 'LinkedIn']
+          vi: ['Liên hệ', 'Xem CV'],
+          zh: ['联系我', '查看简历']
         },
         {
           selector: '.panel-top span',
-          vi: ['Trọng tâm hiện tại', 'Hệ thống LLM Production']
+          vi: ['Trọng tâm hiện tại', 'Hệ thống LLM Production'],
+          zh: ['当前专注方向', '生产环境大模型系统']
         },
         {
           selector: '.code-line span',
@@ -2760,19 +2800,28 @@
             'Phát triển ứng dụng LLM đầu-cuối - streaming, prompt caching và chọn mô hình dựa trên bằng chứng.',
             'Kỹ thuật RAG, truy hồi và voice-AI cho các sản phẩm hướng khách hàng.',
             'Tối ưu chi phí, độ trễ và độ tin cậy của LLM cho quy mô thực tế.'
+          ],
+          zh: [
+            '构建多智能体 / Agentic AI 系统（LangGraph），自动化真实业务流程。',
+            '端到端交付大模型应用 —— 流式输出、提示词缓存，以及基于实测数据的模型选型。',
+            '为面向客户的产品做 RAG、检索与语音 AI 工程。',
+            '优化大模型的成本、延迟与可靠性，以支撑真实规模。'
           ]
         },
         {
           selector: '.panel-bottom span',
-          vi: ['Kỹ sư AI Full-Stack', 'TP.HCM, Việt Nam']
+          vi: ['Kỹ sư AI Full-Stack', 'TP.HCM, Việt Nam'],
+          zh: ['全栈 AI 工程师', '越南 胡志明市']
         },
         {
           selector: '.stat-label',
-          vi: ['Bài báo IEEE', 'Sản phẩm AI đã xây dựng', 'Công ty AI', 'Công nghệ']
+          vi: ['Bài báo IEEE', 'Sản phẩm AI đã xây dựng', 'Công ty AI', 'Công nghệ'],
+          zh: ['IEEE 论文', '已交付 AI 产品', 'AI 企业经历', '技术栈']
         },
         {
           selector: '#experience h2',
-          vi: ['Kinh nghiệm']
+          vi: ['Kinh nghiệm'],
+          zh: ['工作经历']
         },
         {
           selector: '#experience .titem h3',
@@ -2780,6 +2829,11 @@
             'FunAI (Functional AI Partners) <a href="https://fun-ai.io/" target="_blank" rel="noopener" style="color: var(--primary); font-size: 0.78rem; font-weight: 700; text-decoration: none; margin-left: 0.5rem; white-space: nowrap;">Website ↗</a>',
             'InsecLab (Phòng thí nghiệm đại học)',
             'pi-labs.ai <a href="https://www.pi-labs.ai/" target="_blank" rel="noopener" style="color: var(--primary); font-size: 0.78rem; font-weight: 700; text-decoration: none; margin-left: 0.5rem; white-space: nowrap;">Website ↗</a>'
+          ],
+          zh: [
+            'FunAI (Functional AI Partners) <a href="https://fun-ai.io/" target="_blank" rel="noopener" style="color: var(--primary); font-size: 0.78rem; font-weight: 700; text-decoration: none; margin-left: 0.5rem; white-space: nowrap;">官网 ↗</a>',
+            'InsecLab（校级研究实验室）',
+            'pi-labs.ai <a href="https://www.pi-labs.ai/" target="_blank" rel="noopener" style="color: var(--primary); font-size: 0.78rem; font-weight: 700; text-decoration: none; margin-left: 0.5rem; white-space: nowrap;">官网 ↗</a>'
           ]
         },
         {
@@ -2790,20 +2844,35 @@
             'Tác giả chính (Trưởng nhóm nghiên cứu)',
             'Đồng tác giả (Contributor)',
             'Hợp tác nghiên cứu AI'
+          ],
+          zh: [
+            'AI 工程师',
+            '第一作者（研究负责人）',
+            '第一作者（研究负责人）',
+            '共同作者（贡献者）',
+            'AI 研究合作'
           ]
         },
         {
           selector: '#experience .titem > p:first-of-type em',
-          vi: ['2026 – Nay', '11 tháng | Hybrid', 'Tháng 9/2025 - Tháng 12/2025 · 4 tháng | Remote']
+          vi: ['Tháng 5/2026 – Nay | Hybrid', '11 tháng | Hybrid', 'Tháng 9/2025 - Tháng 12/2025 · 4 tháng | Remote'],
+          zh: ['2026 年 5 月 – 至今 | 混合办公', '共 11 个月 | 混合办公', '2025 年 9 月 - 2025 年 12 月 · 4 个月 | 远程']
         },
         {
           selector: '#experience h4 + p em',
           vi: [
-            '2026 – Nay',
+            'Tháng 5/2026 – Nay | Hybrid',
             'Tháng 11/2025 - Tháng 3/2026 · 5 tháng',
             'Tháng 8/2025 - Tháng 11/2025 · 4 tháng',
             'Tháng 5/2025 - Tháng 8/2025 · 4 tháng',
             'Tháng 9/2025 - Tháng 12/2025 · 4 tháng | Remote'
+          ],
+          zh: [
+            '2026 年 5 月 – 至今 | 混合办公',
+            '2025 年 11 月 - 2026 年 3 月 · 5 个月',
+            '2025 年 8 月 - 2025 年 11 月 · 4 个月',
+            '2025 年 5 月 - 2025 年 8 月 · 4 个月',
+            '2025 年 9 月 - 2025 年 12 月 · 4 个月 | 远程'
           ]
         },
         {
@@ -2829,11 +2898,34 @@
             'Xác định phạm vi dự án, schema dữ liệu và chiến lược đánh giá.',
             'Triển khai pipeline tạo dữ liệu tổng hợp và mô phỏng bất thường.',
             'Khám phá mở rộng đa phương thức kết hợp CDR với tín hiệu voice/text cho hệ thống phát hiện gian lận.'
+          ],
+          zh: [
+            '主导为新加坡与日本的企业级 B2B 客户交付<strong>多个生产环境「数字员工」AI 智能体</strong> —— 前期与客户共同梳理方案，随后负责架构、开发、部署与运维全流程。',
+            '基于 <strong>LangGraph + FastAPI</strong> 设计 WhatsApp 对话式智能体，自动化多步骤客户入驻流程；底层为 Postgres 工作队列 + <strong>分布式锁</strong>，并支持人工介入（human-in-the-loop）升级，在 <strong>约 30 路并发会话</strong>下保持稳定。',
+            '交付自主文档分类智能体，通过 <strong>16+ 个 n8n 编排工作流</strong>完成业务文档的接入、分类与归档，并配套基于安全参数化 SQL 的自然语言检索助手。',
+            '构建<strong>多智能体日语语音 AI</strong> 客服系统（ElevenLabs、Firebase、Twilio）—— 从敬语（keigo）提示词设计、KYC 身份核验，到守护每次发版的 <strong>68 条回归测试用例</strong>。',
+            '开发分布式<strong>人脸检测与聚类</strong>流水线（PyTorch、YOLO、InsightFace、HDBSCAN），含 GPU 任务编排，并封装为可处理 <strong>5 GB+</strong> 压缩包上传的全栈平台。',
+            '构建用于漏洞检测系统的智能合约异构图数据处理流水线。',
+            '使用 Python 实现预处理与图构建流程，将原始合约代码转换为结构化图表示。',
+            '通过混合融合（hybrid fusion）架构，将大模型向量嵌入与图表示相结合。',
+            '生成对抗性智能合约样本，以提升模型鲁棒性并支撑大规模评测。',
+            '开发面向智能合约漏洞检测的多模态机器学习流水线，达到 <strong>F1 = 0.823</strong>、<strong>准确率 96.73%</strong>。',
+            '构建整合多个数据集（Prime、HuggingFace Slither-Audited）的预处理与特征提取流程。',
+            '实现结合语义向量嵌入与操作码（opcode）表示的深度学习流水线。',
+            '设计并基准测试多种特征融合策略，包括基于注意力机制与混合架构的方案。',
+            '设计结构化提示词工作流，提升自动化漏洞分析中的推理一致性。',
+            '构建<strong>六阶段提示词流程</strong>，整合角色定义、结果验证、批判复核与推理策略。',
+            '在多种模型配置下评测并优化大模型表现。',
+            '在产业合作中研究基于 CDR/IPDR 数据的电信异常检测问题。',
+            '定义项目范围、数据集结构与评估策略。',
+            '实现合成数据生成与异常模拟流水线。',
+            '探索将 CDR 与语音/文本信号结合的多模态方案，用于欺诈检测系统。'
           ]
         },
         {
           selector: '#skills h2',
-          vi: ['Kỹ năng kỹ thuật']
+          vi: ['Kỹ năng kỹ thuật'],
+          zh: ['技术能力']
         },
         {
           selector: '#skills .card h3',
@@ -2844,6 +2936,14 @@
             'Machine Learning & Thị giác máy tính',
             'Truy hồi & Dữ liệu',
             'Ngôn ngữ'
+          ],
+          zh: [
+            '大模型与智能体 (LLM & Agentic AI)',
+            '生产化 AI 与 MLOps',
+            '全栈与云 (Full-Stack & Cloud)',
+            '机器学习与计算机视觉',
+            '检索与数据',
+            '语言能力'
           ]
         },
         {
@@ -2855,19 +2955,30 @@
             'PyTorch', 'TensorFlow', 'Transformers', 'Học đa phương thức', 'LoRA / QLoRA', 'LLaMA', 'YOLO', 'InsightFace', 'HDBSCAN', 'Chiến lược fusion', 'Benchmark mô hình', 'Ablation Studies',
             'Hybrid Retrieval', 'Vector Search', 'pgvector', 'BM25', 'RRF', 'SentenceTransformers', 'Chroma', 'Python', 'SQL', 'REST APIs', 'MongoDB', 'Tiền xử lý dữ liệu', 'Feature Engineering',
             'Tiếng Anh (Upper-Intermediate B2) - giao tiếp chuyên nghiệp hiệu quả'
+          ],
+          zh: [
+            '多智能体系统', 'LangGraph', 'LangChain', 'LlamaIndex', '智能体工作流', '高级 RAG', '语音 AI (ElevenLabs)', '提示词工程', '提示词缓存', '工具 / 函数调用', '大模型评测', 'Anthropic Claude', 'OpenAI API', 'Google Gemini',
+            'LLMOps', 'FastAPI', 'SSE 流式输出', 'Docker', 'CI/CD', '监控与可观测性', '实验追踪', 'ETL 数据管道', '模型部署服务', '成本与延迟优化',
+            'Next.js / React', 'TypeScript', 'Fastify', 'Supabase / pgvector', 'n8n', 'Vercel', 'Railway', 'Firebase / GCP', 'Cloudflare R2',
+            'PyTorch', 'TensorFlow', 'Transformers', '多模态学习', 'LoRA / QLoRA', 'LLaMA', 'YOLO', 'InsightFace', 'HDBSCAN', '特征融合策略', '模型基准测试', '消融实验',
+            '混合检索', '向量检索', 'pgvector', 'BM25', 'RRF', 'SentenceTransformers', 'Chroma', 'Python', 'SQL', 'REST APIs', 'MongoDB', '数据预处理', '特征工程',
+            '英语（B2 中高级，可胜任专业沟通）· 越南语（母语）· 中文（零基础，正在学习，目标 6 个月内 HSK 3）'
           ]
         },
         {
           selector: '#projects h2',
-          vi: ['Dự án']
+          vi: ['Dự án'],
+          zh: ['项目经历']
         },
         {
           selector: '#projects h3',
-          vi: ['Hệ thống ghép nối CV và việc làm', 'Hệ thống Retrieval-Augmented Generation (RAG) dạng mô-đun']
+          vi: ['Hệ thống ghép nối CV và việc làm', 'Hệ thống Retrieval-Augmented Generation (RAG) dạng mô-đun'],
+          zh: ['简历—岗位智能匹配系统', '模块化检索增强生成（RAG）系统']
         },
         {
           selector: '#projects .btn',
-          vi: ['GitHub', 'GitHub']
+          vi: ['GitHub', 'GitHub'],
+          zh: ['GitHub', 'GitHub']
         },
         {
           selector: '#projects .card > p',
@@ -2876,6 +2987,12 @@
             '<strong>Tech:</strong> Python, FastAPI, MongoDB, React, LangChain, LLaMA 3, SentenceTransformers',
             '<em>Tháng 1/2025 - Tháng 5/2025</em>',
             '<strong>Tech:</strong> Python, FastAPI, MongoDB, LangChain, SentenceTransformers, Chroma'
+          ],
+          zh: [
+            '<em>2024 年 11 月 - 2025 年 1 月</em>',
+            '<strong>技术栈：</strong> Python, FastAPI, MongoDB, React, LangChain, LLaMA 3, SentenceTransformers',
+            '<em>2025 年 1 月 - 2025 年 5 月</em>',
+            '<strong>技术栈：</strong> Python, FastAPI, MongoDB, LangChain, SentenceTransformers, Chroma'
           ]
         },
         {
@@ -2890,11 +3007,23 @@
             'Xây dựng API có khả năng mở rộng với monitoring cho <strong>p95 latency (&lt;1.8s)</strong>, token usage và hiệu năng hệ thống.',
             'Đánh giá hiệu năng truy hồi trên <strong>MS MARCO</strong> và dữ liệu tùy chỉnh bằng các metric đánh giá RAG.',
             'Áp dụng thực hành hướng production gồm logging, latency tracking, caching strategies và cost monitoring.'
+          ],
+          zh: [
+            '构建并部署基于 <strong>RAG</strong> 与语义检索的全栈简历—岗位匹配平台。',
+            '开发检索流水线，上下文 <strong>precision@5 达 0.87</strong>，优于关键词匹配方案。',
+            '设计 ETL 工作流，解析 PDF 简历、预处理数据并为 <strong>30+ 份简历</strong>生成向量嵌入。',
+            '构建支持流式输出的 RESTful API，推荐<strong>响应时间 &lt; 5 秒</strong>。',
+            '在类生产环境中接入可观测性：推理延迟、token 用量与系统监控。',
+            '设计带查询分解与 <strong>RRF 倒数排序融合</strong>的 Agentic RAG 工作流，检索质量提升 <strong>22%</strong>。',
+            '构建可扩展 API，并监控 <strong>P95 延迟（&lt;1.8 秒）</strong>、token 用量与系统性能。',
+            '在 <strong>MS MARCO</strong> 及自建数据集上，使用 RAG 评测指标衡量检索表现。',
+            '落地生产化实践：日志、延迟追踪、缓存策略与成本监控。'
           ]
         },
         {
           selector: '#publications h2',
-          vi: ['Công bố khoa học']
+          vi: ['Công bố khoa học'],
+          zh: ['学术论文']
         },
         {
           selector: '#publications h3',
@@ -2902,6 +3031,11 @@
             'Prompt-Based Smart Contract Analysis',
             'Multimodal Smart Contract Security',
             'Tích hợp LLM và đồ thị cho bảo mật smart contract'
+          ],
+          zh: [
+            '基于提示词的智能合约分析 (Prompt-Based Smart Contract Analysis)',
+            '面向智能合约安全的多模态方法 (Multimodal Smart Contract Security)',
+            '融合大语言模型与图结构的智能合约安全研究'
           ]
         },
         {
@@ -2910,11 +3044,17 @@
             '<em>Đồng tác giả, Hội nghị IEEE MAPR 2025</em>',
             '<em>Tác giả chính, Hội nghị IEEE ISCIT 2025</em>',
             '<em>Tác giả chính, Submitted (2026)</em>'
+          ],
+          zh: [
+            '<em>共同作者，IEEE MAPR 2025 会议</em>',
+            '<em>第一作者，IEEE ISCIT 2025 会议</em>',
+            '<em>第一作者，已投稿（2026）</em>'
           ]
         },
         {
           selector: '#publications .btn',
-          vi: ['Bài báo', 'Bài báo']
+          vi: ['Bài báo', 'Bài báo'],
+          zh: ['论文原文', '论文原文']
         },
         {
           selector: '#publications li',
@@ -2928,15 +3068,28 @@
             'Dẫn dắt thiết kế kiến trúc và triển khai hệ thống hybrid kết hợp LLM embeddings với heterogeneous graph neural networks.',
             'Xây dựng pipeline tiền xử lý cho graph construction và adversarial sample generation nhằm cải thiện độ bền vững của mô hình.',
             'Thực hiện benchmark và ablation studies mở rộng trên nhiều cấu hình mô hình.'
+          ],
+          zh: [
+            '设计并实现<strong>六阶段结构化提示词流程</strong>，提升推理一致性并降低大模型智能合约审计中的幻觉。',
+            '在真实场景下评测多个大模型，包括 <strong>OpenAI o 系列</strong>与 <strong>Llama 系列</strong>。',
+            '通过提示词优化与多阶段推理工作流，提升分析的鲁棒性与可靠性。',
+            '主导开发多模态深度学习流水线，漏洞检测达到 <strong>F1 = 0.823</strong>、<strong>准确率 96.73%</strong>。',
+            '构建统一预处理流水线，并基准测试<strong>五种特征融合策略</strong>，含基于注意力机制与混合架构方案。',
+            '提出多视角向量嵌入融合方法，同时捕捉智能合约的语义与结构特征。',
+            '主导架构设计与实现，将大模型向量嵌入与异构图神经网络相结合的混合系统。',
+            '构建图构建与对抗样本生成的预处理流水线，以提升模型鲁棒性。',
+            '在多种模型配置下进行大规模基准测试与消融实验。'
           ]
         },
         {
           selector: '#education h2',
-          vi: ['Học vấn']
+          vi: ['Học vấn'],
+          zh: ['教育背景']
         },
         {
           selector: '#education h3',
-          vi: ['Cử nhân Khoa học Máy tính']
+          vi: ['Cử nhân Khoa học Máy tính'],
+          zh: ['计算机科学 学士']
         },
         {
           selector: '#education .card > p',
@@ -2945,15 +3098,23 @@
             '<em>2022 - 2026</em>',
             '<strong>Chuyên ngành:</strong> Trí tuệ nhân tạo và An toàn thông tin',
             '<strong>Môn học liên quan:</strong> Trí tuệ nhân tạo, Machine Learning, Deep Learning, Data Mining, MLOps'
+          ],
+          zh: [
+            '<strong>胡志明市国家大学 — 信息技术大学 (UIT, VNU-HCM)</strong>',
+            '<em>2022 - 2026</em>',
+            '<strong>专业方向：</strong> 人工智能与信息安全',
+            '<strong>相关课程：</strong> 人工智能、机器学习、深度学习、数据挖掘、MLOps'
           ]
         },
         {
           selector: '#certificates h2',
-          vi: ['Trọng tâm nghiên cứu']
+          vi: ['Trọng tâm nghiên cứu'],
+          zh: ['研究方向']
         },
         {
           selector: '#certificates h4',
-          vi: ['Bảo mật Blockchain', 'AI Agentic & Đa phương thức', 'Kỹ thuật LLM Production']
+          vi: ['Bảo mật Blockchain', 'AI Agentic & Đa phương thức', 'Kỹ thuật LLM Production'],
+          zh: ['区块链安全', '智能体与多模态 AI', '生产环境大模型工程']
         },
         {
           selector: '#certificates .cert-meta p',
@@ -2961,42 +3122,76 @@
             'Phát hiện lỗ hổng smart contract bằng LLM, embeddings và biểu diễn dựa trên đồ thị.',
             'Hệ thống đa agent, tool-use và pipeline voice/đa phương thức biến LLM thành "nhân sự số" tự động trong thực tế.',
             'Đánh giá, observability và tối ưu chi phí/độ trễ để vận hành sản phẩm LLM ổn định ở quy mô lớn.'
+          ],
+          zh: [
+            '基于大语言模型、向量嵌入与图表示的智能合约漏洞检测。',
+            '多智能体系统、工具调用，以及把大模型变成真实「数字员工」的语音 / 多模态流水线。',
+            '评测体系、可观测性与成本 / 延迟优化，让大模型产品在规模化环境下稳定运行。'
           ]
         },
         {
           selector: '#contact h2',
-          vi: ['Liên hệ']
+          vi: ['Liên hệ'],
+          zh: ['联系方式']
         },
         {
           selector: '#contact .contact-item h4',
-          vi: ['Email', 'Email công việc', 'LinkedIn', 'GitHub', 'Điện thoại', 'WhatsApp']
+          vi: ['Email', 'Email công việc', 'LinkedIn', 'GitHub', 'Điện thoại', 'WhatsApp'],
+          zh: ['邮箱', '工作邮箱', 'LinkedIn', 'GitHub', '电话', 'WhatsApp']
         },
         {
           selector: '.footer p',
-          vi: ['&copy; <span id="year"></span> GIANG LE HUYNH. Được xây dựng cho kỹ thuật AI ứng dụng và nghiên cứu.']
+          vi: ['&copy; <span id="year"></span> GIANG LE HUYNH. Được xây dựng cho kỹ thuật AI ứng dụng và nghiên cứu.'],
+          zh: ['&copy; <span id="year"></span> 黎黄江 GIANG LE HUYNH · 专注应用 AI 工程与研究。']
         },
         {
           selector: '#backToTop',
-          vi: ['Lên']
+          vi: ['Lên'],
+          zh: ['顶部']
         }
       ];
+
       const attributeTranslations = [
+        {
+          selector: '.hero-portrait img',
+          attribute: 'alt',
+          vi: ['Ảnh chân dung Giang Le Huynh'],
+          zh: ['黎黄江 (Giang Le Huynh) 头像']
+        },
         {
           selector: '.hero .cta-row',
           attribute: 'aria-label',
-          vi: ['Hành động chính']
+          vi: ['Hành động chính'],
+          zh: ['主要操作']
         },
         {
           selector: '.hero-panel',
           attribute: 'aria-label',
-          vi: ['Trọng tâm AI hiện tại']
+          vi: ['Trọng tâm AI hiện tại'],
+          zh: ['当前 AI 专注方向']
         },
         {
           selector: '#backToTop',
           attribute: 'aria-label',
-          vi: ['Lên đầu trang']
+          vi: ['Lên đầu trang'],
+          zh: ['返回页首']
         }
       ];
+
+      const LANGS = ['en', 'vi', 'zh'];
+      const LANG_LABEL = { en: 'ENG', vi: 'VIE', zh: '中文' };
+      const LANG_NEXT_HINT = { en: 'Chuyển sang tiếng Việt', vi: '切换为中文', zh: 'Switch to English' };
+      const HTML_LANG = { en: 'en', vi: 'vi', zh: 'zh-Hans' };
+      const PAGE_TITLE = {
+        en: 'GIANG LE HUYNH - AI Engineer',
+        vi: 'GIANG LE HUYNH - Kỹ sư AI',
+        zh: '黎黄江 GIANG LE HUYNH - AI 工程师'
+      };
+      const PAGE_DESCRIPTION = {
+        en: 'Giang Le Huynh - AI Engineer building production LLM systems: multi-agent workflows (LangGraph), RAG, voice AI, and evaluation. 2 IEEE publications on prompt engineering and smart contract security.',
+        vi: 'Giang Le Huynh - Kỹ sư AI xây dựng hệ thống LLM production: multi-agent (LangGraph), RAG, voice AI và evaluation. 2 bài báo IEEE về prompt engineering và bảo mật smart contract.',
+        zh: '黎黄江 (Giang Le Huynh) — AI 工程师，专注生产环境大模型系统：多智能体工作流 (LangGraph)、RAG、语音 AI 与模型评测。已发表 2 篇 IEEE 论文，方向为提示词工程与智能合约安全。'
+      };
 
       const originalHtml = new Map();
       const originalAttributes = new Map();
@@ -3017,11 +3212,12 @@
 
       const getStoredLanguage = () => {
         const requestedLanguage = new URLSearchParams(window.location.search).get('lang');
-        if (requestedLanguage === 'vi' || requestedLanguage === 'en') {
+        if (LANGS.includes(requestedLanguage)) {
           return requestedLanguage;
         }
         try {
-          return localStorage.getItem('portfolioLanguage') === 'vi' ? 'vi' : 'en';
+          const saved = localStorage.getItem('portfolioLanguage');
+          return LANGS.includes(saved) ? saved : 'en';
         } catch (error) {
           return 'en';
         }
@@ -3043,36 +3239,33 @@
       };
 
       const applyLanguage = (language) => {
-        currentLanguage = language === 'vi' ? 'vi' : 'en';
-        document.documentElement.lang = currentLanguage === 'vi' ? 'vi' : 'en';
-        document.title = currentLanguage === 'vi' ? 'GIANG LE HUYNH - Kỹ sư AI' : originalTitle;
+        currentLanguage = LANGS.includes(language) ? language : 'en';
+        document.documentElement.lang = HTML_LANG[currentLanguage];
+        document.title = PAGE_TITLE[currentLanguage] || originalTitle;
         if (metaDescription) {
-          metaDescription.setAttribute(
-            'content',
-            currentLanguage === 'vi'
-              ? 'XXX'
-              : originalDescription
-          );
+          metaDescription.setAttribute('content', PAGE_DESCRIPTION[currentLanguage] || originalDescription);
         }
 
         translationGroups.forEach((group) => {
+          const table = group[currentLanguage];
           document.querySelectorAll(group.selector).forEach((element, index) => {
             const original = originalHtml.get(keyFor(group.selector, index));
-            const translated = group.vi[index];
-            element.innerHTML = currentLanguage === 'vi' && translated !== undefined ? translated : original;
+            const translated = table ? table[index] : undefined;
+            element.innerHTML = translated !== undefined ? translated : original;
           });
         });
 
         attributeTranslations.forEach((group) => {
+          const table = group[currentLanguage];
           document.querySelectorAll(group.selector).forEach((element, index) => {
             const original = originalAttributes.get(keyFor(group.selector, index, group.attribute));
-            const translated = group.vi[index];
-            element.setAttribute(group.attribute, currentLanguage === 'vi' && translated !== undefined ? translated : original);
+            const translated = table ? table[index] : undefined;
+            element.setAttribute(group.attribute, translated !== undefined ? translated : original);
           });
         });
 
-        languageButton.textContent = currentLanguage === 'vi' ? 'VIE' : 'ENG';
-        languageButton.setAttribute('aria-label', currentLanguage === 'vi' ? 'Switch to English' : 'Chuyển sang tiếng Việt');
+        languageButton.textContent = LANG_LABEL[currentLanguage];
+        languageButton.setAttribute('aria-label', LANG_NEXT_HINT[currentLanguage]);
         storeLanguage(currentLanguage);
         setYear();
       };
@@ -3116,7 +3309,7 @@
       });
 
       languageButton.addEventListener('click', () => {
-        applyLanguage(currentLanguage === 'vi' ? 'en' : 'vi');
+        applyLanguage(LANGS[(LANGS.indexOf(currentLanguage) + 1) % LANGS.length]);
       });
 
       backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
