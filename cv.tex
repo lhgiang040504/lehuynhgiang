@@ -5,8 +5,8 @@
 % Packages:
 \usepackage[
     ignoreheadfoot, % set margins without considering header and footer
-    top=2 cm, % seperation between body and page edge from the top
-    bottom=2 cm, % seperation between body and page edge from the bottom
+    top=1.75 cm, % seperation between body and page edge from the top
+    bottom=1.75 cm, % seperation between body and page edge from the bottom
     left=2 cm, % seperation between body and page edge from the left
     right=2 cm, % seperation between body and page edge from the right
     footskip=1.0 cm, % seperation between body and footer
@@ -73,7 +73,7 @@
 }{
     % print bold title, give 0.15 cm space and draw a line of 0.8 pt thickness
     % from the end of the title to the end of the body
-    \textbf{#1}\hspace{0.15cm}\titlerule[0.8pt]\hspace{-0.1cm}
+    \textbf{#1}\hspace{0.10cm}\titlerule[0.8pt]\hspace{-0.1cm}
 }[] % section title formatting
 
 \titlespacing{\section}{
@@ -81,7 +81,7 @@
     -1pt
 }{
     % top space:
-    0.1 cm
+    0.05 cm
 }{
     % bottom space:
     0.1 cm
@@ -223,10 +223,10 @@
 
 \section{Experience}
 \begin{onecolentry}
-    \textbf{AI Engineer – FunAI (Functional AI Partners)} \hfill \textit{2026 -- Present}
+    \textbf{AI Engineer – FunAI (Functional AI Partners)} \hfill \textit{May 2026 -- Present}
     \begin{highlights}
 \item Lead delivery of \textbf{multiple production ``Digital Staff'' AI agents} for enterprise B2B clients (Singapore, Japan) --- from client scoping to architecture, deployment, and operations
-\item Built agentic LLM systems on \textbf{LangGraph + FastAPI}: a WhatsApp onboarding assistant (distributed locking, human-in-the-loop) and a document-classification agent across \textbf{16+ n8n workflows}
+\item Built product using LangGraph and FastAPI for course-generation platform, automating images and module-summary videos with MinIO storage and Creatomate/FFmpeg rendering
 \item Shipped a multi-agent \textbf{Japanese voice-AI} (ElevenLabs; 68-case test suite) and a face-detection \& clustering pipeline (YOLO, InsightFace, HDBSCAN) on a \textbf{5 GB+} full-stack platform
 \end{highlights}
 \end{onecolentry}
@@ -234,7 +234,7 @@
 \vspace{0.2 cm}
 
 \begin{onecolentry}
-    \textbf{AI Researcher – InsecLab (University Lab)} \hfill \textit{Feb 2025 -- Present}
+    \textbf{AI Researcher – InsecLab (University Lab)} \hfill \textit{Feb 2025 -- May 2026}
     \begin{highlights}
 \item Published \textbf{2 IEEE papers} (1 first-author) on LLM- and multimodal-based smart contract vulnerability detection
 \item Designed structured prompt pipelines (agent-role chaining) and built scalable embedding/graph pipelines for benchmarking and ablation studies
@@ -246,8 +246,8 @@
 \begin{onecolentry}
     \textbf{AI Research Collaboration – Pi Labs AI (India Company)} \hfill \textit{Sep 2025 -- Dec 2025}
     \begin{highlights}
-\item Built anomaly detection for telecom data (CDR/IPDR) in an industry collaboration; helped define problem scope and evaluation criteria
-\item Evaluated RAG frameworks (KAG) and explored graph-based/multimodal approaches (CDR + voice/text) for fraud detection
+\item Helped define scope and evaluation criteria of anomaly detection for telecom data in an industry collaboration
+\item Evaluated KAG frameworks and explored graph-based/multimodal approaches (CDR + voice/text) for fraud detection
 \end{highlights}
 \end{onecolentry}
 
@@ -267,7 +267,7 @@
         % \item Enabled real-time recommendations with streaming APIs \textbf{(<2s response time)}
         % \item Monitored system performance including latency and token usage
 \item Built a full-stack RAG system with \textbf{custom similarity scoring for resume–job matching}
-\item Delivered more relevant job recommendations with \textbf{<2s latency} on 400+ scraped job descriptions and 100+ real resumes
+\item Delivered more relevant recommendations with \textbf{<2s latency} on 400+ scraped job descriptions and 100+ real resumes
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
@@ -350,7 +350,7 @@
 
 \section{Skills}
 \begin{onecolentry}
-\textbf{Generative AI \& LLMs:} Multi-agent \& agentic workflows (LangGraph, ReAct), RAG, Voice AI (ElevenLabs), Prompt Engineering, LLM Evaluation
+\textbf{Generative AI \& LLMs:} Multi-agent \& agentic workflows, Voice AI (ElevenLabs), Prompt Engineering, LLM Evaluation
 
 \vspace{0.1 cm}
 
