@@ -158,7 +158,7 @@
         \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
         \LenToUnit{\paperheight-1.0 cm}
     ){\vtop{{\null}\makebox[0pt][c]{
-        \small\color{gray}\textit{Last updated in July 2026}\hspace{\widthof{Last updated in July 2026}}
+        \small\color{gray}\textit{Last updated in August 2026}\hspace{\widthof{Last updated in August 2026}}
     }}}%
   }%
 }%
@@ -186,7 +186,7 @@
         \vspace{0.1 cm}
 
         \fontsize{20 pt}{20 pt}
-        \textbf{AI Engineer}
+        \textbf{Full-Stack AI Engineer}
 
         \vspace{0.1 cm}
 
@@ -210,24 +210,22 @@
 
     % ------------------------------------------------------------------------------------------
 
-% \section{Professional Summary}
-% \begin{onecolentry}
-%     Computer Science graduate specializing in Generative AI and Large Language Models (LLMs). Built RAG pipelines, agent-based workflows, and multimodal systems through research and hands-on projects.
-
-%     \vspace{0.2 cm}
-
-%     Experience across the full AI lifecycle: data processing, model experimentation, evaluation, and deployment. Interested in applying LLMs to real-world problems, especially smart contract security. Seeking an AI Engineer role to contribute to production-ready GenAI systems.
-% \end{onecolentry}
+\section{Summary}
+\begin{onecolentry}
+Full-stack AI / LLM Systems Engineer who delivers production AI products end-to-end - from client scoping and architecture to full-stack development, deployment, and operations. Built agentic assistants, RAG, Japanese voice-AI, and computer-vision systems for B2B clients across Singapore and Japan, with a focus on reliability, latency, and cost.
+\end{onecolentry}
 
 % ------------------------------------------------------------------------------------------
 
 \section{Experience}
 \begin{onecolentry}
-    \textbf{AI Engineer – FunAI (Functional AI Partners)} \hfill \textit{May 2026 -- Present}
+    \textbf{AI Developer Intern – FunAI (Functional AI Partners)} \hfill \textit{May 2026 -- Present}
     \begin{highlights}
-\item Lead delivery of \textbf{multiple production ``Digital Staff'' AI agents} for enterprise B2B clients (Singapore, Japan) --- from client scoping to architecture, deployment, and operations
-\item Built product using LangGraph and FastAPI for course-generation platform, automating images and module-summary videos with MinIO storage and Creatomate/FFmpeg rendering
-\item Shipped a multi-agent \textbf{Japanese voice-AI} (ElevenLabs; 68-case test suite) and a face-detection \& clustering pipeline (YOLO, InsightFace, HDBSCAN) on a \textbf{5 GB+} full-stack platform
+\item Contribute to end-to-end delivery of production \textbf{``Digital Staff'' AI agents} for enterprise B2B clients in Singapore and Japan - from client scoping to deployment and operations
+\item Built a LangGraph and FastAPI course-generation platform that automates image creation and module-summary videos using MinIO and Creatomate/FFmpeg
+\item Automated document intake, classification, and filing across \textbf{16+ n8n workflows}; built a natural-language retrieval assistant using parameterized SQL
+\item Built a multi-agent \textbf{Japanese voice-AI} customer-service system (ElevenLabs, Firebase, Twilio), including keigo prompts, KYC verification, and a \textbf{68-case} regression suite
+\item Delivered a distributed face-detection \& clustering pipeline (PyTorch, YOLO, InsightFace, HDBSCAN) with GPU orchestration for a \textbf{5 GB+} full-stack upload platform
 \end{highlights}
 \end{onecolentry}
 
@@ -237,7 +235,8 @@
     \textbf{AI Researcher – InsecLab (University Lab)} \hfill \textit{Feb 2025 -- May 2026}
     \begin{highlights}
 \item Published \textbf{2 IEEE papers} (1 first-author) on LLM- and multimodal-based smart contract vulnerability detection
-\item Designed structured prompt pipelines (agent-role chaining) and built scalable embedding/graph pipelines for benchmarking and ablation studies
+\item Developed a six-stage LLM prompt pipeline and hybrid LLM-embedding / heterogeneous-graph workflows for automated vulnerability analysis
+\item Led a multimodal detection pipeline achieving \textbf{0.823 F1} and \textbf{96.73\% accuracy}; benchmarked five fusion strategies and ran ablation studies
 \end{highlights}
 \end{onecolentry}
 
@@ -246,48 +245,12 @@
 \begin{onecolentry}
     \textbf{AI Research Collaboration – Pi Labs AI (India Company)} \hfill \textit{Sep 2025 -- Dec 2025}
     \begin{highlights}
-\item Helped define scope and evaluation criteria of anomaly detection for telecom data in an industry collaboration
-\item Evaluated KAG frameworks and explored graph-based/multimodal approaches (CDR + voice/text) for fraud detection
+\item Defined the dataset schema and evaluation plan for telecom anomaly detection on CDR/IPDR data in an industry collaboration
+\item Built synthetic-data generation and anomaly-simulation pipelines; explored multimodal CDR + voice/text signals for fraud detection
 \end{highlights}
 \end{onecolentry}
 
 % ------------------------------------------------------------------------------------------
-
-\section{Projects}
-\begin{onecolentry}
-    \textbf{Job Resume Matching System} \hfill \textit{Nov 2024 – Jan 2025} \\
-    \href{https://github.com/lhgiang040504/Job-Resume-Matching-Project}{GitHub}
-   
-    \textbf{Tech}: Python, FastAPI, MongoDB, React, LangChain, LLaMA 3, SentenceTransformers
-   
-    \begin{highlights}
-        % \item Built a full-stack RAG system for matching resumes to job descriptions using semantic search
-        % \item Achieved \textbf{precision@5 of 0.87}, outperforming keyword-based methods
-        % \item Processed PDF resumes and generated embeddings via automated ETL pipeline
-        % \item Enabled real-time recommendations with streaming APIs \textbf{(<2s response time)}
-        % \item Monitored system performance including latency and token usage
-\item Built a full-stack RAG system with \textbf{custom similarity scoring for resume–job matching}
-\item Delivered more relevant recommendations with \textbf{<2s latency} on 400+ scraped job descriptions and 100+ real resumes
-    \end{highlights}
-\end{onecolentry}
-\vspace{0.2 cm}
-
-\begin{onecolentry}
-    \textbf{Modular Retrieval-Augmented Generation (RAG) System} \hfill \textit{Jan 2025 – May 2025} \\
-    \href{https://github.com/lhgiang040504/sematic_search}{GitHub}
-   
-    \textbf{Tech}: Python, FastAPI, MongoDB, LangChain, SentenceTransformers, Chroma
-   
-    \begin{highlights}
-        % \item Designed a modular RAG pipeline with query decomposition and hybrid retrieval (RRF)
-        % \item Improved retrieval quality, increasing relevant context by \textbf{22\%}
-        % \item Built scalable backend with p95 latency < 1.8s for real-time querying
-        % \item Evaluated system performance using RAGAS on benchmark and custom datasets
-        % \item Applied production practices: logging, caching, and cost tracking
-\item Designed a modular RAG pipeline with\textbf{ multiple query strategies}
-\item Improved retrieval quality by \textbf{22\%} with p95 latency < 1.8s, evaluated on benchmark datasets (\textbf{MS MARCO}, \textbf{Cranfield})
-    \end{highlights}
-\end{onecolentry}
 
 % ------------------------------------------------------------------------------------------
 
@@ -336,7 +299,6 @@
         \textbf{University of Information Technology (UIT), VNU-HCM} \\
         \textbf{Major}: Computer Science \\
         \textbf{Specialization}: Artificial Intelligence and Information Security \\
-        \textbf{Relevant Coursework}: Artificial Intelligence, Machine Learning, Deep Learning, Data Mining, MLOps, AI Systems
 \end{threecolentry}
 
 % ------------------------------------------------------------------------------------------
@@ -350,23 +312,27 @@
 
 \section{Skills}
 \begin{onecolentry}
-\textbf{Generative AI \& LLMs:} Multi-agent \& agentic workflows, Voice AI (ElevenLabs), Prompt Engineering, LLM Evaluation
+\textbf{Production AI Systems:} LangGraph, Multi-Agent Systems, RAG, LLM Evaluation, Voice AI, Prompt Engineering
 
 \vspace{0.1 cm}
 
-\textbf{Full-Stack \& Cloud:} Next.js/React, TypeScript, FastAPI, Supabase/pgvector, n8n, Vercel/Railway, Firebase
+\textbf{Backend \& AI Platform:} Python, FastAPI, n8n, SQL, PostgreSQL/pgvector, SSE Streaming, ETL Pipelines
 
 \vspace{0.1 cm}
 
-\textbf{MLOps \& Production:} Docker, CI/CD, prompt caching, streaming, monitoring (latency, cost), experiment tracking
+\textbf{Deployment \& Operations:} Docker, CI/CD, Monitoring \& Observability, Cost \& Latency Optimization, Firebase, MinIO
 
 \vspace{0.1 cm}
 
-\textbf{Retrieval \& Data:} Hybrid Retrieval, Vector Search, RRF, BM25, SentenceTransformers, SQL, MongoDB
+\textbf{Full-Stack Delivery:} TypeScript, Next.js/React, Fastify, Supabase, Cloudflare R2
 
 \vspace{0.1 cm}
 
-\textbf{Languages:} English (Upper-Intermediate B2 – Effective professional communication)
+\textbf{ML \& Computer Vision:} PyTorch, Transformers, Multimodal Learning, YOLO, InsightFace, HDBSCAN
+
+\vspace{0.1 cm}
+
+\textbf{English:} Upper-Intermediate (B2)
 \end{onecolentry}
 
 \end{document}

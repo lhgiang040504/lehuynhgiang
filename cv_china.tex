@@ -147,7 +147,7 @@
         \vspace{0.1 cm}
 
         \fontsize{18 pt}{18 pt}
-        \textbf{AI 工程师 / 提示词工程师}
+        \textbf{全栈 AI 工程师}
 
         \vspace{0.1 cm}
 
@@ -177,39 +177,31 @@
 
 \section{个人简介}
 \begin{onecolentry}
-    计算机科学专业应届生（人工智能与信息安全方向），现任 AI 工程师，负责为企业级 B2B 客户（新加坡、日本）交付生产环境的 AI 智能体产品，覆盖需求梳理、架构设计、全栈开发、部署到线上运维的完整流程。
-
-    \vspace{0.15 cm}
-
-    核心专长为\textbf{提示词架构、大模型评测与安全护栏（Guardrails）}：已发表 2 篇 IEEE 论文（其中 1 篇为第一作者），研究方向即为\textbf{结构化提示词流程设计与降低大模型幻觉}。既做研究，也能把系统真正上线并持续运行。
-
-    \vspace{0.15 cm}
-
-    \textbf{语言说明（如实告知）}：英语可胜任专业沟通（B2，日常与新加坡及日本客户对接）；越南语为母语；\textbf{中文目前为零基础，已开始学习，目标 6 个月内达到 HSK 3}。此前曾在无日语基础的情况下，独立完成日语\textbf{敬语}语音客服系统的提示词设计与结构，由母语同事复核语气，本人负责逻辑、约束与测试体系。
+全栈 AI 工程师，端到端交付生产环境 AI 产品：从客户需求梳理、架构设计到全栈开发、部署与运维。已为新加坡和日本 B2B 客户构建智能体助手、RAG、日语语音 AI 与计算机视觉系统，聚焦可靠性、延迟与成本优化。
 \end{onecolentry}
 
 % ------------------------------------------------------------------------------------------
 
 \section{工作经历}
 \begin{onecolentry}
-    \textbf{AI 工程师 — FunAI (Functional AI Partners)} \hfill \textit{2026 年 5 月 -- 至今}
+    \textbf{AI 工程师实习生 — FunAI (Functional AI Partners)} \hfill \textit{2026 年 5 月 -- 至今}
     \begin{highlights}
-\item 主导为新加坡、日本企业客户交付\textbf{多个生产环境「数字员工」AI 智能体}，从与客户共同梳理需求，到架构设计、开发、部署与运维全流程负责
-\item 基于 \textbf{LangGraph + FastAPI} 设计 WhatsApp 对话式智能体，自动化多步骤客户入驻流程；底层采用 Postgres 工作队列 + \textbf{分布式锁}，并支持人工介入（human-in-the-loop）升级，在 \textbf{约 30 路并发会话}下保持稳定
-\item 交付自主文档分类智能体，通过 \textbf{16+ 个 n8n 编排工作流}完成业务文档的接入、分类与归档，并配套基于安全参数化 SQL 的自然语言检索助手
-\item 构建\textbf{多智能体日语语音 AI} 客服系统（ElevenLabs、Firebase、Twilio）：负责敬语提示词设计、KYC 身份核验，以及守护每次发版的 \textbf{68 条回归测试用例}
-\item 开发分布式\textbf{人脸检测与聚类}流水线（PyTorch、YOLO、InsightFace、HDBSCAN），含 GPU 任务编排，并封装为可处理 \textbf{5 GB+} 压缩包上传的全栈平台
+\item 参与为新加坡、日本企业客户交付生产环境\textbf{「数字员工」AI 智能体}，覆盖需求梳理、架构、部署与运维
+\item 使用 \textbf{LangGraph + FastAPI} 构建课程生成平台，自动化图片生成与课程模块总结视频，并集成 MinIO 和 Creatomate/FFmpeg
+\item 通过 \textbf{16+ 个 n8n 工作流}自动化文档接收、分类与归档；构建基于安全参数化 SQL 的自然语言检索助手
+\item 构建\textbf{多智能体日语语音 AI} 客服系统（ElevenLabs、Firebase、Twilio），覆盖敬语提示词、KYC 核验和 \textbf{68 条}回归测试用例
+\item 交付分布式\textbf{人脸检测与聚类}流水线（PyTorch、YOLO、InsightFace、HDBSCAN），含 GPU 编排并支持 \textbf{5 GB+} 全栈上传平台
 \end{highlights}
 \end{onecolentry}
 
 \vspace{0.2 cm}
 
 \begin{onecolentry}
-    \textbf{AI 研究员 — InsecLab（校级实验室）} \hfill \textit{2025 年 5 月 -- 2026 年 3 月}
+    \textbf{AI 研究员 — InsecLab（校级实验室）} \hfill \textit{2025 年 2 月 -- 2026 年 5 月}
     \begin{highlights}
 \item 发表 \textbf{2 篇 IEEE 论文}（1 篇第一作者），主题为基于大语言模型与多模态方法的智能合约漏洞检测
-\item 设计\textbf{六阶段结构化提示词流程}（角色定义 → 验证 → 批判 → 推理链），提升推理一致性并降低大模型审计中的幻觉
-\item 在统一提示词下横向评测多个大模型（OpenAI o 系列、Llama 等），并搭建可扩展的向量嵌入与图数据流水线，支撑基准测试与消融实验
+\item 开发六阶段 LLM 提示词流程，以及 LLM 向量嵌入与异构图结合的漏洞分析工作流
+\item 主导多模态漏洞检测流水线，达到 \textbf{F1 = 0.823}、\textbf{准确率 96.73\%}；基准测试五种融合策略并开展消融实验
 \end{highlights}
 \end{onecolentry}
 
@@ -218,8 +210,8 @@
 \begin{onecolentry}
     \textbf{AI 研究合作 — Pi Labs AI（印度公司，远程）} \hfill \textit{2025 年 9 月 -- 2025 年 12 月}
     \begin{highlights}
-\item 在产业合作项目中构建电信数据（CDR/IPDR）异常检测方案，并参与定义问题范围与评估标准
-\item 评测 RAG 框架（KAG），探索基于图结构及多模态（CDR + 语音/文本）的欺诈检测方案
+\item 在产业合作中为 CDR/IPDR 电信异常检测定义数据集结构与评估方案
+\item 构建合成数据生成与异常模拟流水线；探索 CDR 与语音/文本信号结合的多模态欺诈检测
 \end{highlights}
 \end{onecolentry}
 
@@ -242,41 +234,6 @@
     \end{highlights}
 \end{onecolentry}
 
-\vspace{0.15 cm}
-
-\begin{onecolentry}
-    融合大语言模型与异构图的智能合约安全研究 \hfill \textit{\textbf{第一作者}，已投稿 2026}
-\end{onecolentry}
-
-% ------------------------------------------------------------------------------------------
-
-\section{项目经历}
-\begin{onecolentry}
-    \textbf{模块化检索增强生成（RAG）系统} \hfill \textit{2025 年 1 月 -- 2025 年 5 月} \\
-    \href{https://github.com/lhgiang040504/sematic_search}{GitHub}
-
-    \textbf{技术栈}：Python、FastAPI、MongoDB、LangChain、SentenceTransformers、Chroma
-
-    \begin{highlights}
-\item 设计支持\textbf{多种查询策略}的模块化 RAG 流水线（查询分解 + RRF 倒数排序融合）
-\item 在 \textbf{MS MARCO}、\textbf{Cranfield} 基准数据集上，相较基线检索质量提升 \textbf{22\%}，P95 延迟 < 1.8 秒
-    \end{highlights}
-\end{onecolentry}
-
-\vspace{0.2 cm}
-
-\begin{onecolentry}
-    \textbf{简历—岗位智能匹配系统} \hfill \textit{2024 年 11 月 -- 2025 年 1 月} \\
-    \href{https://github.com/lhgiang040504/Job-Resume-Matching-Project}{GitHub}
-
-    \textbf{技术栈}：Python、FastAPI、MongoDB、React、LangChain、LLaMA 3、SentenceTransformers
-
-    \begin{highlights}
-\item 全栈 RAG 系统，自研\textbf{简历—岗位相似度打分机制}，上下文 precision@5 达 \textbf{0.87}
-\item 基于 400+ 条爬取岗位描述与真实简历数据，推荐响应延迟 < 5 秒，并接入延迟与 token 用量监控
-    \end{highlights}
-\end{onecolentry}
-
 % ------------------------------------------------------------------------------------------
 
 \section{教育背景}
@@ -291,31 +248,24 @@
 
 \section{技术能力}
 \begin{onecolentry}
-\textbf{提示词与大模型工程：} 提示词架构设计、系统提示词（System Prompt）、思维链 CoT / ReAct / Few-shot、\textbf{结构化输出}（JSON / XML / Markdown 约束）、工具与函数调用、提示词缓存、\textbf{大模型评测}（测试集构建、指标设计、多模型对比）、\textbf{安全护栏}（防越狱、防提示注入、降低幻觉）
+\textbf{生产级 AI 系统：} LangGraph、多智能体系统、RAG、大模型评测、语音 AI、提示词工程
 
 \vspace{0.1 cm}
 
-\textbf{大模型与智能体：} 多智能体与智能体工作流（LangGraph、ReAct）、RAG / 高级检索、语音 AI（ElevenLabs）、Anthropic Claude、OpenAI、Google Gemini、LLaMA
+\textbf{后端与 AI 平台：} Python、FastAPI、n8n、SQL、PostgreSQL/pgvector、SSE 流式输出、ETL 流水线
 
 \vspace{0.1 cm}
 
-\textbf{AI 开发工具：} Claude Code、Anthropic Console / Workbench、OpenAI Playground、Codex、Cursor、MCP（Model Context Protocol）服务配置、n8n
+\textbf{部署与运维：} Docker、CI/CD、监控与可观测性、成本与延迟优化、Firebase、MinIO
 
 \vspace{0.1 cm}
 
-\textbf{全栈与云：} Next.js / React、TypeScript、FastAPI、Supabase / pgvector、Vercel、Railway、Firebase / GCP、Cloudflare R2
+\textbf{全栈交付：} TypeScript、Next.js/React、Fastify、Supabase、Cloudflare R2
 
 \vspace{0.1 cm}
 
-\textbf{MLOps 与生产化：} Docker、CI/CD、SSE 流式输出、监控与可观测性（延迟、成本）、实验追踪
-
-\vspace{0.1 cm}
-
-\textbf{检索与数据：} 混合检索、向量检索、RRF、BM25、SentenceTransformers、SQL、MongoDB
-
-\vspace{0.1 cm}
-
-\textbf{语言：} 英语（B2 中高级，可胜任专业沟通）· 越南语（母语）· 中文（零基础，正在学习，目标 6 个月内 HSK 3）
+\textbf{机器学习与计算机视觉：} PyTorch、Transformers、多模态学习、YOLO、InsightFace、HDBSCAN \quad
+\textbf{英语：} B2（可胜任专业沟通）
 \end{onecolentry}
 
 \end{document}
