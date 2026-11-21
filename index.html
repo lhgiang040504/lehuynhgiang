@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>GIANG LE HUYNH - AI Engineer</title>
-    <meta name="description" content="Giang Le Huynh - AI Engineer building applied AI and full-stack products across computer vision, fraud detection, data integration, and business automation." />
+    <meta name="description" content="Giang Le Huynh - AI Engineer building and operating applied AI products across computer vision, VLM-assisted review, and full-stack systems." />
     <style>
       :root {
         --bg: #0b0f0c;              /* very dark greenish */
@@ -2160,7 +2160,7 @@
         <figure class="hero-portrait">
           <img src="personal/avatar.jpg" alt="Giang Le Huynh portrait" />
         </figure>
-        <p>I'm Giang, an AI Engineer who builds AI and full-stack products end-to-end. My experience spans agentic systems, RAG, and voice AI, as well as video-based fraud detection and restaurant operations - connecting computer-vision events with POS data, building APIs and staff-facing tools, and automating data and reporting workflows. I focus on reliable systems that solve concrete business problems.</p>
+        <p>I'm Giang, an AI Engineer building and operating applied AI products across computer vision, VLM-assisted case review, agentic systems, RAG, and voice AI. I take features from implementation through staging, database migrations, deployment, and operations.</p>
         <div class="cta-row" aria-label="primary actions">
           <a class="btn" href="#contact"><i class="fas fa-paper-plane" style="margin-right:8px"></i>Contact Me</a>
           <a class="btn secondary" href="https://github.com/lhgiang040504/lehuynhgiang/blob/main/personal/GiangLeHuynh_AI_Engineer.pdf" target="_blank" rel="noopener">View CV</a>
@@ -2237,15 +2237,15 @@
           <p><em>Sep 2026 – Present | On-site</em></p>
 
           <ul>
-            <li>Built core features for a restaurant queue-management product, spanning a <strong>Node.js/TypeScript API</strong> and React interface, staff authentication, role- and outlet-scoped permissions, staff account management, wait-time estimates, and multilingual support.</li>
+            <li>Owned feature delivery end to end, from API/UI implementation and database migrations through staging, production deployment, and operational support.</li>
 
-            <li>Implemented network video recorder (<strong>NVR</strong>) management APIs and an admin interface with outlet-level access controls; added head-count-difference analysis, data loaders supporting overnight time ranges, and source-record traceability to a fraud-detection platform.</li>
+            <li>Built computer-vision detectors for cash drawers, printers, and cardboard boxes; combined rule-based fraud signals with <strong>VLM-assisted case review</strong>.</li>
 
-            <li>Developed a resumable <strong>Apache Airflow</strong> pipeline to sync POS data from a legacy fraud-detection platform to its successor through REST APIs, with source-ID deduplication, checkpoints, dry-run controls, and automated tests; also scheduled monthly AI/POS exports to Google Drive.</li>
+            <li>Delivered a restaurant queue product with a <strong>Node.js/TypeScript API</strong> and React UI, including staff authentication, outlet-scoped access, wait-time estimates, and multilingual support.</li>
 
-            <li>Added a customer-waiting/no-staff detection workflow using zone-state logic and grace periods, with annotated video evidence and an event timeline for case review.</li>
+            <li>Built resumable <strong>Apache Airflow</strong> pipelines for POS synchronization between fraud-detection platforms and monthly AI/POS exports to Google Drive.</li>
 
-            <li>Improved payroll calculation and reporting using Discord attendance and Google Sheets; automated monthly sales-tax report generation and delivery to Google Sheets.</li>
+            <li>Improved payroll reporting and automated monthly sales-tax reports using Discord, Google Sheets, and Google Drive.</li>
           </ul>
         </div>
 
@@ -2419,6 +2419,8 @@
           <span class="pill">CI/CD</span>
           <span class="pill">Monitoring & Observability</span>
           <span class="pill">Cost & Latency Optimization</span>
+          <span class="pill">Staging & Production Deployments</span>
+          <span class="pill">Database Migrations</span>
           <span class="pill">Firebase</span>
           <span class="pill">MinIO</span>
           <span class="pill">Google Sheets &amp; Drive APIs</span>
@@ -2454,6 +2456,7 @@
           <span class="pill">YOLO</span>
           <span class="pill">InsightFace</span>
           <span class="pill">HDBSCAN</span>
+          <span class="pill">Vision-Language Models</span>
         </div>
       </div>
 
@@ -2787,8 +2790,8 @@
         },
         {
           selector: '.hero-content > p',
-          vi: ['Tôi là Giang, kỹ sư AI phát triển sản phẩm AI và full-stack từ đầu đến cuối. Kinh nghiệm của tôi trải rộng từ hệ thống agentic, RAG và voice AI đến phát hiện gian lận qua video và vận hành nhà hàng: kết nối sự kiện từ thị giác máy tính với dữ liệu POS, xây dựng API và công cụ cho nhân viên, đồng thời tự động hóa đồng bộ dữ liệu và báo cáo. Tôi tập trung vào những hệ thống đáng tin cậy, giải quyết bài toán nghiệp vụ cụ thể.'],
-          zh: ['我是 Giang，一名端到端构建 AI 与全栈产品的 AI 工程师。我的经验涵盖智能体系统、RAG、语音 AI，以及基于视频的欺诈检测与餐饮运营：将计算机视觉事件与 POS 数据连接，构建 API 和员工工具，并自动化数据同步与报告流程。我专注于构建可靠且能解决实际业务问题的系统。']
+          vi: ['Tôi là Giang, kỹ sư AI phát triển và vận hành sản phẩm AI ứng dụng trong thị giác máy tính, đánh giá case bằng VLM, hệ thống agentic, RAG và voice AI. Tôi đảm nhiệm tính năng từ triển khai, staging, migration cơ sở dữ liệu đến deploy và vận hành.'],
+          zh: ['我是 Giang，一名构建并运营应用型 AI 产品的 AI 工程师，专注于计算机视觉、VLM 案例评估、智能体系统、RAG 与语音 AI。我负责功能从实现、预发布环境、数据库迁移到部署和运维的完整交付。']
         },
         {
           selector: '.hero .btn',
@@ -2900,11 +2903,11 @@
         {
           selector: '#experience li',
           vi: [
-            'Xây dựng các tính năng cốt lõi cho sản phẩm quản lý hàng chờ nhà hàng, gồm <strong>API Node.js/TypeScript</strong> và giao diện React, đăng nhập nhân viên, phân quyền theo vai trò và outlet, quản lý tài khoản nhân viên, ước lượng thời gian chờ và hỗ trợ nhiều ngôn ngữ.',
-            'Triển khai API quản lý đầu ghi hình mạng (<strong>NVR</strong>) và giao diện quản trị với quyền truy cập theo outlet; bổ sung phân tích chênh lệch số lượng người, bộ nạp dữ liệu hỗ trợ khoảng thời gian qua đêm và truy vết bản ghi nguồn cho nền tảng phát hiện gian lận.',
-            'Phát triển pipeline <strong>Apache Airflow</strong> có thể tiếp tục từ checkpoint để đồng bộ dữ liệu POS từ nền tảng phát hiện gian lận cũ sang phiên bản kế tiếp qua REST API, gồm khử trùng lặp theo ID nguồn, kiểm soát chạy thử và kiểm thử tự động; đồng thời lên lịch xuất dữ liệu AI/POS hàng tháng lên Google Drive.',
-            'Bổ sung workflow phát hiện khách chờ nhưng không có nhân viên bằng logic trạng thái vùng và thời gian chờ, kèm video bằng chứng có chú thích và timeline sự kiện để rà soát vụ việc.',
-            'Cải thiện tính toán và báo cáo lương dựa trên dữ liệu chấm công Discord và Google Sheets; tự động tạo và gửi báo cáo thuế bán hàng hàng tháng lên Google Sheets.',
+            'Chịu trách nhiệm xuyên suốt việc triển khai tính năng, từ API/UI và migration cơ sở dữ liệu đến staging, deploy production và hỗ trợ vận hành.',
+            'Xây dựng model thị giác máy tính để phát hiện két tiền, máy in và hộp carton; kết hợp tín hiệu gian lận theo rule với <strong>đánh giá case bằng VLM</strong>.',
+            'Phát triển sản phẩm quản lý hàng chờ nhà hàng với <strong>API Node.js/TypeScript</strong> và giao diện React, gồm đăng nhập nhân viên, phân quyền theo outlet, ước lượng thời gian chờ và hỗ trợ nhiều ngôn ngữ.',
+            'Xây dựng pipeline <strong>Apache Airflow</strong> có thể chạy tiếp để đồng bộ POS giữa các nền tảng phát hiện gian lận và xuất dữ liệu AI/POS hàng tháng lên Google Drive.',
+            'Cải thiện báo cáo lương và tự động hóa báo cáo thuế bán hàng hàng tháng với Discord, Google Sheets và Google Drive.',
             'Phụ trách triển khai các <strong>AI agent "Digital Staff"</strong> chạy production cho khách hàng doanh nghiệp B2B tại Singapore và Nhật Bản - từ làm rõ bài toán với khách hàng đến kiến trúc, triển khai và vận hành.',
             'Xây dựng sản phẩm sử dụng <strong>LangGraph và FastAPI</strong> cho nền tảng tạo khóa học, tự động hóa hình ảnh và video tổng kết mô-đun với <strong>lưu trữ MinIO</strong> và <strong>kết xuất Creatomate/FFmpeg</strong>.',
             'Triển khai agent tự động phân loại &amp; lưu trữ tài liệu nghiệp vụ qua <strong>16+ workflow n8n</strong>, kèm trợ lý truy hồi bằng ngôn ngữ tự nhiên xây trên SQL tham số hoá an toàn.',
@@ -2927,11 +2930,11 @@
             'Khám phá mở rộng đa phương thức kết hợp CDR với tín hiệu voice/text cho hệ thống phát hiện gian lận.'
           ],
           zh: [
-            '为餐厅排队管理产品构建核心功能，涵盖 <strong>Node.js/TypeScript API</strong> 与 React 界面、员工登录、按角色和门店划分的权限、员工账号管理、等待时间估算及多语言支持。',
-            '实现网络录像机（<strong>NVR</strong>）管理 API 和按门店授权的管理界面；为欺诈检测平台增加人数差异分析、支持跨夜时间范围的数据加载器及源记录追踪。',
-            '开发可从检查点恢复的 <strong>Apache Airflow</strong> 流水线，通过 REST API 将 POS 数据从旧版欺诈检测平台同步至后续平台，包含源 ID 去重、试运行控制和自动化测试；并安排每月将 AI/POS 数据导出至 Google Drive。',
-            '新增顾客等待但没有员工服务的检测流程，使用区域状态逻辑和等待宽限时间，并提供带标注的视频证据与事件时间线供审核。',
-            '使用 Discord 考勤数据和 Google Sheets 改进薪资计算与报告，并自动生成月度销售税报告并交付至 Google Sheets。',
+            '端到端负责功能交付，涵盖 API/UI 实现、数据库迁移、预发布环境、生产部署与运维支持。',
+            '构建用于检测钱箱、打印机和纸箱的计算机视觉模型，并将基于规则的欺诈信号与 <strong>VLM 案例评估</strong>结合。',
+            '交付餐厅排队管理产品，包含 <strong>Node.js/TypeScript API</strong> 和 React 界面、员工登录、门店权限、等待时间估算及多语言支持。',
+            '构建可恢复运行的 <strong>Apache Airflow</strong> 流水线，用于欺诈检测平台间的 POS 同步及每月 AI/POS 数据导出至 Google Drive。',
+            '改进薪资报告，并使用 Discord、Google Sheets 和 Google Drive 自动生成月度销售税报告。',
             '负责为新加坡与日本的企业级 B2B 客户交付<strong>生产环境「数字员工」AI 智能体</strong> —— 从需求梳理到架构、部署与运维。',
             '基于 <strong>LangGraph 与 FastAPI</strong> 构建课程生成平台，自动生成图片和模块总结视频，并使用 <strong>MinIO 存储</strong>及 <strong>Creatomate/FFmpeg 渲染</strong>。',
             '交付自主文档分类智能体，通过 <strong>16+ 个 n8n 编排工作流</strong>完成业务文档的接入、分类与归档，并配套基于安全参数化 SQL 的自然语言检索助手。',
@@ -2983,17 +2986,19 @@
           vi: [
             'Hệ thống đa agent', 'LangGraph', 'RAG', 'Đánh giá LLM', 'Voice AI', 'Prompt Engineering',
             'Python', 'FastAPI', 'n8n', 'SQL', 'PostgreSQL / pgvector', 'SSE Streaming', 'ETL Pipelines',
-            'Docker', 'CI/CD', 'Monitoring & Observability', 'Tối ưu chi phí & độ trễ', 'Firebase', 'MinIO',
-            'TypeScript', 'Next.js / React', 'Fastify', 'Supabase', 'Cloudflare R2',
-            'PyTorch', 'Transformers', 'Học đa phương thức', 'YOLO', 'InsightFace', 'HDBSCAN',
+            'Apache Airflow', 'Tích hợp REST API', 'Phân quyền theo vai trò (RBAC)',
+            'Docker', 'CI/CD', 'Monitoring & Observability', 'Tối ưu chi phí & độ trễ', 'Triển khai staging & production', 'Migration cơ sở dữ liệu', 'Firebase', 'MinIO', 'Google Sheets &amp; Drive APIs',
+            'TypeScript', 'Node.js', 'Next.js / React', 'Fastify', 'Supabase', 'Cloudflare R2',
+            'PyTorch', 'Transformers', 'Học đa phương thức', 'YOLO', 'InsightFace', 'HDBSCAN', 'Vision-Language Models',
             'Tiếng Anh (Upper-Intermediate B2) - giao tiếp chuyên nghiệp hiệu quả'
           ],
           zh: [
             '多智能体系统', 'LangGraph', 'RAG', '大模型评测', '语音 AI', '提示词工程',
             'Python', 'FastAPI', 'n8n', 'SQL', 'PostgreSQL / pgvector', 'SSE 流式输出', 'ETL 流水线',
-            'Docker', 'CI/CD', '监控与可观测性', '成本与延迟优化', 'Firebase', 'MinIO',
-            'TypeScript', 'Next.js / React', 'Fastify', 'Supabase', 'Cloudflare R2',
-            'PyTorch', 'Transformers', '多模态学习', 'YOLO', 'InsightFace', 'HDBSCAN',
+            'Apache Airflow', 'REST API 集成', '基于角色的访问控制（RBAC）',
+            'Docker', 'CI/CD', '监控与可观测性', '成本与延迟优化', '预发布与生产部署', '数据库迁移', 'Firebase', 'MinIO', 'Google Sheets 与 Drive API',
+            'TypeScript', 'Node.js', 'Next.js / React', 'Fastify', 'Supabase', 'Cloudflare R2',
+            'PyTorch', 'Transformers', '多模态学习', 'YOLO', 'InsightFace', 'HDBSCAN', '视觉语言模型',
             '英语（B2 中高级，可胜任专业沟通）'
           ]
         },
@@ -3220,9 +3225,9 @@
         zh: '黎黄江 GIANG LE HUYNH - AI 工程师'
       };
       const PAGE_DESCRIPTION = {
-        en: 'Giang Le Huynh - AI Engineer building applied AI and full-stack products across computer vision, fraud detection, data integration, and business automation.',
-        vi: 'Giang Le Huynh - Kỹ sư AI phát triển sản phẩm AI và full-stack trong các lĩnh vực thị giác máy tính, phát hiện gian lận, tích hợp dữ liệu và tự động hóa nghiệp vụ.',
-        zh: 'Giang Le Huynh — AI 工程师，构建计算机视觉、欺诈检测、数据集成与业务自动化领域的 AI 和全栈产品。'
+        en: 'Giang Le Huynh - AI Engineer building applied AI products across computer vision, VLM-assisted case review, and full-stack systems.',
+        vi: 'Giang Le Huynh - Kỹ sư AI phát triển sản phẩm AI ứng dụng trong thị giác máy tính, đánh giá case bằng VLM và hệ thống full-stack.',
+        zh: 'Giang Le Huynh — AI 工程师，构建计算机视觉、VLM 案例评估与全栈系统领域的应用型 AI 产品。'
       };
 
       const originalHtml = new Map();
