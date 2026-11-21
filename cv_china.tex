@@ -177,20 +177,29 @@
 
 \section{个人简介}
 \begin{onecolentry}
-全栈 AI 工程师，端到端交付生产环境 AI 产品：从客户需求梳理、架构设计到全栈开发、部署与运维。已为新加坡和日本 B2B 客户构建智能体助手、RAG、日语语音 AI 与计算机视觉系统，聚焦可靠性、延迟与成本优化。
+全栈 AI 工程师，专注于计算机视觉、VLM 案例审核和 LLM 工作流等应用型 AI 产品。具备从模型评估、API/后端开发到预发布、生产部署与运维的端到端经验，服务过新加坡和日本的 B2B 客户。
 \end{onecolentry}
 
 % ------------------------------------------------------------------------------------------
 
 \section{工作经历}
 \begin{onecolentry}
-    \textbf{AI 工程师实习生 — FunAI (Functional AI Partners)} \hfill \textit{2026 年 5 月 -- 至今}
+    \textbf{全栈 AI 工程师（合同制）— \href{https://lereap.com/}{Reap AI}} \hfill \textit{2026 年 9 月 -- 至今}
     \begin{highlights}
-\item 参与为新加坡、日本企业客户交付生产环境\textbf{「数字员工」AI 智能体}，覆盖需求梳理、架构、部署与运维
-\item 使用 \textbf{LangGraph + FastAPI} 构建课程生成平台，自动化图片生成与课程模块总结视频，并集成 MinIO 和 Creatomate/FFmpeg
-\item 通过 \textbf{16+ 个 n8n 工作流}自动化文档接收、分类与归档；构建基于安全参数化 SQL 的自然语言检索助手
-\item 构建\textbf{多智能体日语语音 AI} 客服系统（ElevenLabs、Firebase、Twilio），覆盖敬语提示词、KYC 核验和 \textbf{68 条}回归测试用例
-\item 交付分布式\textbf{人脸检测与聚类}流水线（PyTorch、YOLO、InsightFace、HDBSCAN），含 GPU 编排并支持 \textbf{5 GB+} 全栈上传平台
+\item 开发用于检测现金抽屉、打印机和纸箱的视觉模型；结合规则信号与 VLM 审核视频/POS 案例
+\item 端到端负责 API/UI、数据库迁移、预发布/生产部署及运维，并用 Tailscale、Infisical 管理团队接入与密钥
+\item 使用 MLflow 跟踪模型实验；部署 GPU/Linux 服务和 TanStack Start 原型
+\end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{onecolentry}
+    \textbf{AI 产品负责人（合同）— Functional AI Partners Pte Ltd} \hfill \textit{2026 年 5 月 -- 2026 年 9 月}
+    \begin{highlights}
+\item 负责为新加坡、日本企业客户交付生产环境\textbf{「数字员工」AI 智能体}，覆盖需求梳理、架构、部署与运维
+\item 使用 LangGraph/FastAPI 构建课程生成；通过 \textbf{16+ 个 n8n 工作流}自动化文档处理并构建 SQL 自然语言检索
+\item 交付多智能体\textbf{日语语音 AI} 客服系统，支持 KYC 核验并通过 \textbf{68 条}回归用例验证（ElevenLabs、Firebase、Twilio）
 \end{highlights}
 \end{onecolentry}
 
@@ -199,9 +208,7 @@
 \begin{onecolentry}
     \textbf{AI 研究员 — InsecLab（校级实验室）} \hfill \textit{2025 年 2 月 -- 2026 年 5 月}
     \begin{highlights}
-\item 发表 \textbf{2 篇 IEEE 论文}（1 篇第一作者），主题为基于大语言模型与多模态方法的智能合约漏洞检测
-\item 开发六阶段 LLM 提示词流程，以及 LLM 向量嵌入与异构图结合的漏洞分析工作流
-\item 主导多模态漏洞检测流水线，达到 \textbf{F1 = 0.823}、\textbf{准确率 96.73\%}；基准测试五种融合策略并开展消融实验
+\item 构建六阶段 LLM 分析流程和多模态漏洞检测模型（\textbf{F1 = 0.823}，\textbf{准确率 96.73\%}），评测五种融合策略
 \end{highlights}
 \end{onecolentry}
 
@@ -210,28 +217,8 @@
 \begin{onecolentry}
     \textbf{AI 研究合作 — Pi Labs AI（印度公司，远程）} \hfill \textit{2025 年 9 月 -- 2025 年 12 月}
     \begin{highlights}
-\item 在产业合作中为 CDR/IPDR 电信异常检测定义数据集结构与评估方案
-\item 构建合成数据生成与异常模拟流水线；探索 CDR 与语音/文本信号结合的多模态欺诈检测
+\item 定义 CDR/IPDR 电信异常检测数据与评估方案；构建合成数据和异常模拟流水线用于欺诈研究
 \end{highlights}
-\end{onecolentry}
-
-% ------------------------------------------------------------------------------------------
-
-\section{学术论文}
-\begin{onecolentry}
-    \href{https://ieeexplore.ieee.org/abstract/document/11133797}{基于提示词的智能合约分析 (Prompt-Based Smart Contract Analysis)} \hfill \textit{共同作者，IEEE MAPR 2025}
-    \begin{highlights}
-\item 设计并实现\textbf{六阶段结构化提示词流程}，提升推理一致性、降低幻觉；横向评测 OpenAI o 系列与 Llama 等多个模型
-    \end{highlights}
-\end{onecolentry}
-
-\vspace{0.15 cm}
-
-\begin{onecolentry}
-    \href{https://ieeexplore.ieee.org/abstract/document/11231648}{面向智能合约安全的多模态方法 (Multimodal Approach for Smart Contract Security)} \hfill \textit{\textbf{第一作者}，IEEE ISCIT 2025}
-    \begin{highlights}
-\item 多模态深度学习流水线，漏洞检测 \textbf{F1 = 0.823}、\textbf{准确率 96.73\%}；基准测试五种特征融合策略
-    \end{highlights}
 \end{onecolentry}
 
 % ------------------------------------------------------------------------------------------
@@ -241,30 +228,25 @@
         \textbf{胡志明市国家大学 — 信息技术大学 (UIT, VNU-HCM)} \\
         \textbf{专业}：计算机科学 \\
         \textbf{方向}：人工智能与信息安全 \\
-        \textbf{相关课程}：人工智能、机器学习、深度学习、数据挖掘、MLOps、AI 系统
 \end{threecolentry}
 
 % ------------------------------------------------------------------------------------------
 
 \section{技术能力}
 \begin{onecolentry}
-\textbf{生产级 AI 系统：} LangGraph、多智能体系统、RAG、大模型评测、语音 AI、提示词工程
+\textbf{AI 系统：} LangGraph、多智能体系统、RAG、LLM/VLM 评测、语音 AI
 
 \vspace{0.1 cm}
 
-\textbf{后端与 AI 平台：} Python、FastAPI、n8n、SQL、PostgreSQL/pgvector、SSE 流式输出、ETL 流水线
+\textbf{机器学习与计算机视觉：} PyTorch、Transformers、YOLO、InsightFace、HDBSCAN、MLflow、多模态学习
 
 \vspace{0.1 cm}
 
-\textbf{部署与运维：} Docker、CI/CD、监控与可观测性、成本与延迟优化、Firebase、MinIO
+\textbf{后端与产品：} Python、FastAPI、TypeScript、Node.js/React、TanStack Start、SQL、PostgreSQL/pgvector、n8n
 
 \vspace{0.1 cm}
 
-\textbf{全栈交付：} TypeScript、Next.js/React、Fastify、Supabase、Cloudflare R2
-
-\vspace{0.1 cm}
-
-\textbf{机器学习与计算机视觉：} PyTorch、Transformers、多模态学习、YOLO、InsightFace、HDBSCAN \quad
+\textbf{部署与运维：} Docker、CI/CD、预发布/生产部署、数据库迁移、监控、Tailscale、Infisical \quad
 \textbf{英语：} B2（可胜任专业沟通）
 \end{onecolentry}
 
