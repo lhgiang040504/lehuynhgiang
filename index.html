@@ -2111,6 +2111,87 @@
       .lang-toggle {
         min-width: 52px;
       }
+      #openCvViewer {
+        font: inherit;
+        cursor: pointer;
+      }
+      .cv-dialog {
+        width: min(1100px, calc(100vw - 2rem));
+        height: min(88vh, 920px);
+        max-width: none;
+        max-height: none;
+        padding: 0;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: var(--card);
+        color: var(--text);
+        overflow: hidden;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+      }
+      .cv-dialog::backdrop {
+        background: rgba(5, 8, 7, 0.82);
+        backdrop-filter: blur(5px);
+      }
+      .cv-dialog-layout {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .cv-dialog-header,
+      .cv-dialog-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.85rem 1rem;
+      }
+      .cv-dialog-header {
+        border-bottom: 1px solid var(--line);
+      }
+      .cv-dialog-header h2 {
+        margin: 0;
+        font-size: 1.05rem;
+      }
+      .cv-dialog-close {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.45rem 0.75rem;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: transparent;
+        color: var(--text);
+        font: inherit;
+        cursor: pointer;
+      }
+      .cv-pdf-frame {
+        flex: 1;
+        width: 100%;
+        min-height: 0;
+        border: 0;
+        background: #fff;
+      }
+      .cv-dialog-footer {
+        justify-content: flex-end;
+        border-top: 1px solid var(--line);
+      }
+      .cv-dialog-footer .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font: inherit;
+      }
+      @media (max-width: 640px) {
+        .cv-dialog {
+          width: 100vw;
+          height: 100dvh;
+          margin: 0;
+          border-radius: 0;
+        }
+        .cv-dialog-footer .btn {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -2163,7 +2244,7 @@
         <p>I'm Giang, an AI Engineer building and operating applied AI products across computer vision, VLM-assisted case review, agentic systems, RAG, and voice AI. I take features from implementation through staging, database migrations, deployment, and operations.</p>
         <div class="cta-row" aria-label="primary actions">
           <a class="btn" href="#contact"><i class="fas fa-paper-plane" style="margin-right:8px"></i>Contact Me</a>
-          <a class="btn secondary" href="https://github.com/lhgiang040504/lehuynhgiang/blob/main/personal/GiangLeHuynh_AI_Engineer.pdf" target="_blank" rel="noopener">View CV</a>
+          <button class="btn secondary" id="openCvViewer" type="button">View CV</button>
           <!-- <a class="btn secondary" href="https://www.linkedin.com/in/lhgiang040504/" target="_blank" rel="noopener"><i class="fab fa-linkedin" style="margin-right:8px"></i>LinkedIn</a> -->
         </div>
 
@@ -2733,6 +2814,22 @@
     </section>
     </main>
 
+    <dialog class="cv-dialog" id="cvViewerDialog" aria-labelledby="cvViewerTitle">
+      <div class="cv-dialog-layout">
+        <div class="cv-dialog-header">
+          <h2 id="cvViewerTitle">CV Preview</h2>
+          <button class="cv-dialog-close" id="closeCvViewer" type="button">
+            <span aria-hidden="true">×</span>
+            <span id="closeCvViewerText">Close</span>
+          </button>
+        </div>
+        <iframe class="cv-pdf-frame" id="cvPdfFrame" title="CV PDF preview" src="about:blank"></iframe>
+        <div class="cv-dialog-footer">
+          <a class="btn secondary" id="cvGitHubLink" href="https://github.com/lhgiang040504/lehuynhgiang/blob/main/personal/GiangLeHuynh_AI_Engineer.pdf" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </div>
+    </dialog>
+
     <footer class="footer">
       <div class="container">
         <p>&copy; <span id="year"></span> GIANG LE HUYNH. Built for applied AI engineering and Research.</p>
@@ -2751,6 +2848,11 @@
       const backToTop = document.getElementById('backToTop');
       const scrollProgress = document.getElementById('scrollProgress');
       const languageButton = document.getElementById('languageToggle');
+      const openCvViewerButton = document.getElementById('openCvViewer');
+      const closeCvViewerButton = document.getElementById('closeCvViewer');
+      const cvViewerDialog = document.getElementById('cvViewerDialog');
+      const cvPdfFrame = document.getElementById('cvPdfFrame');
+      const cvGitHubLink = document.getElementById('cvGitHubLink');
       const sections = Array.from(document.querySelectorAll('section[id]'));
       const navLinks = Array.from(document.querySelectorAll('.links a'));
       const metaDescription = document.querySelector('meta[name="description"]');
@@ -2804,6 +2906,21 @@
           selector: '.hero .btn',
           vi: ['Liên hệ', 'Xem CV'],
           zh: ['联系我', '查看简历']
+        },
+        {
+          selector: '#cvViewerTitle',
+          vi: ['Xem trước CV'],
+          zh: ['简历预览']
+        },
+        {
+          selector: '#closeCvViewerText',
+          vi: ['Đóng'],
+          zh: ['关闭']
+        },
+        {
+          selector: '#cvGitHubLink',
+          vi: ['Mở CV trên GitHub'],
+          zh: ['在 GitHub 查看简历']
         },
         {
           selector: '.panel-top span',
@@ -3221,6 +3338,18 @@
           attribute: 'aria-label',
           vi: ['Lên đầu trang'],
           zh: ['返回页首']
+        },
+        {
+          selector: '#closeCvViewer',
+          attribute: 'aria-label',
+          vi: ['Đóng bản xem trước CV'],
+          zh: ['关闭简历预览']
+        },
+        {
+          selector: '#cvPdfFrame',
+          attribute: 'title',
+          vi: ['Bản xem trước CV dạng PDF'],
+          zh: ['简历 PDF 预览']
         }
       ];
 
@@ -3228,6 +3357,20 @@
       const LANG_LABEL = { en: 'ENG', vi: 'VIE', zh: '中文' };
       const LANG_NEXT_HINT = { en: 'Chuyển sang tiếng Việt', vi: '切换为中文', zh: 'Switch to English' };
       const HTML_LANG = { en: 'en', vi: 'vi', zh: 'zh-Hans' };
+      const CV_RESOURCES = {
+        en: {
+          pdf: 'personal/GiangLeHuynh_AI_Engineer.pdf',
+          github: 'https://github.com/lhgiang040504/lehuynhgiang/blob/main/personal/GiangLeHuynh_AI_Engineer.pdf'
+        },
+        vi: {
+          pdf: 'personal/GiangLeHuynh_AI_Engineer.pdf',
+          github: 'https://github.com/lhgiang040504/lehuynhgiang/blob/main/personal/GiangLeHuynh_AI_Engineer.pdf'
+        },
+        zh: {
+          pdf: 'personal/GiangLeHuynh_AI_Engineer_Chinese.pdf',
+          github: 'https://github.com/lhgiang040504/lehuynhgiang/blob/main/personal/GiangLeHuynh_AI_Engineer_Chinese.pdf'
+        }
+      };
       const PAGE_TITLE = {
         en: 'GIANG LE HUYNH - AI Engineer',
         vi: 'GIANG LE HUYNH - Kỹ sư AI',
@@ -3310,6 +3453,12 @@
           });
         });
 
+        const cvResource = CV_RESOURCES[currentLanguage] || CV_RESOURCES.en;
+        cvGitHubLink.href = cvResource.github;
+        if (cvViewerDialog.open) {
+          cvPdfFrame.src = cvResource.pdf;
+        }
+
         languageButton.textContent = LANG_LABEL[currentLanguage];
         languageButton.setAttribute('aria-label', LANG_NEXT_HINT[currentLanguage]);
         storeLanguage(currentLanguage);
@@ -3356,6 +3505,21 @@
 
       languageButton.addEventListener('click', () => {
         applyLanguage(LANGS[(LANGS.indexOf(currentLanguage) + 1) % LANGS.length]);
+      });
+
+      openCvViewerButton.addEventListener('click', () => {
+        const cvResource = CV_RESOURCES[currentLanguage] || CV_RESOURCES.en;
+        cvPdfFrame.src = cvResource.pdf;
+        cvViewerDialog.showModal();
+      });
+      closeCvViewerButton.addEventListener('click', () => cvViewerDialog.close());
+      cvViewerDialog.addEventListener('click', (event) => {
+        if (event.target === cvViewerDialog) {
+          cvViewerDialog.close();
+        }
+      });
+      cvViewerDialog.addEventListener('close', () => {
+        cvPdfFrame.src = 'about:blank';
       });
 
       backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
